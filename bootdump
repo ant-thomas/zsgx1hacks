@@ -1,0 +1,685 @@
+console init done
+
+
+U-Boot 2012.10 (Jul 25 2017 - 13:49:12) for GK7102 rb-jxh42-v1.0 (GOKE)
+
+HAL:   20160913 
+DRAM:  64 MiB
+Flash: 16 MiB
+NAND:  [No SPI nand] 
+SD/MMC: 0
+SF:    16 MiB [page:256 Bytes] [sector:64 KiB] [count:256] (XM25QH128)
+In:    serial
+Out:   serial
+Err:   serial
+Net:   Int PHY 
+Hit any key to stop autoboot:  1  0 
+[PROCESS_SEPARATORS] sf probe;sf read 0xc1000000 0x50000 0x260000;bootm 0xc1000000
+SF:    16 MiB [page:256 Bytes] [sector:64 KiB] [count:256] (XM25QH128)
+put param to memory
+mem size (36)
+total mem size (64)
+bsb size (1)
+usr size (0)
+
+the kernel image is zImage or Image
+entry = 0xc1000000 
+## Transferring control to Linux (at address c1000000)...
+
+Starting kernel ...
+
+machid = 3988 r2 = 0xc0000100 
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0
+[    0.000000] Linux version 3.4.43-gk (root@localhost.localdomain) (gcc version 4.6.1 (crosstool-NG 1.18.0) ) #69 PREEMPT Wed Jul 26 15:14:35 CST 2017
+[    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+[    0.000000] CPU: VIPT aliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: Goke IPC Board
+[    0.000000] Memory policy: ECC disabled, Data cache writeback
+[    0.000000] AHB: 0x90000000  0xf2000000  -- 0x1000000
+[    0.000000] APB: 0xa0000000  0xf3000000  -- 0x1000000
+[    0.000000] PPM: 0xc0000000  0xc0000000  -- 0x200000
+[    0.000000] BSB: 0xc2600000  0xf5000000  -- 0x100000
+[    0.000000] DSP: 0xc2700000  0xf6000000  -- 0x18f0000
+[    0.000000] USR: 0xc3ff0000  0xfe000000  -- 0x10000
+[    0.000000] hal version = 20160913 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 9144
+[    0.000000] Kernel command line: console=ttySGK0,115200 mem=36M rootfstype=jffs2 root=/dev/mtdblock2 init=nuxrcc mtdparts=gk_flash:320K(U),2432K(K),13632K(A)
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 36MB = 36MB total
+[    0.000000] Memory: 29384k/29384k available, 7480k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xff600000 - 0xffe00000   (   8 MB)
+[    0.000000]     vmalloc : 0x82800000 - 0xff000000   (1992 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x82400000   (  36 MB)
+[    0.000000]     modules : 0x7f000000 - 0x80000000   (  16 MB)
+[    0.000000]       .text : 0x80008000 - 0x80412000   (4136 kB)
+[    0.000000]       .init : 0x80412000 - 0x80689000   (2524 kB)
+[    0.000000]       .data : 0x8068a000 - 0x806b1be0   ( 159 kB)
+[    0.000000]        .bss : 0x806b1c04 - 0x806e41b8   ( 202 kB)
+[    0.000000] NR_IRQS:128
+[    0.000000] >> gk init irq vic1...
+[    0.000000] >> gk init irq vic2...
+[    0.000000] gk init vic...
+[    0.000000] mach gk init timer...
+[    0.000000] sched_clock: 32 bits at 100 Hz, resolution 10000000ns, wraps every 4294967286ms
+[    0.000000] Console: colour dummy device 80x30
+[    0.000000] console [ttySGK0] enabled
+[    0.020000] Calibrating delay loop... 597.60 BogoMIPS (lpj=2988032)
+[    0.080000] pid_max: default: 32768 minimum: 301
+[    0.080000] Mount-cache hash table entries: 512
+[    0.090000] CPU: Testing write buffer coherency: ok
+[    0.100000] Setting up static identity map for 0xc0544288 - 0xc05442c0
+[    0.110000] NET: Registered protocol family 16
+[    0.120000] init timer...
+[    0.120000] Init HW timer for DSP communication
+[    0.120000] init gpio...
+[    0.130000] ###################################
+[    0.130000] [BOOT VERSION] GK7102 rb-jxh42-v1.0 v1.0 
+[    0.140000] [NET  INT_CLK] Internal PHY clock 
+[    0.140000] [GPIO]#############################
+[    0.150000] [GPIO] gpio map get from uboot
+[    0.150000] [GPIO CFG] gpio   count = 53
+[    0.160000] [GPIO CFG] intphy count = 3
+[    0.160000] [GPIO CFG] extphy count = 3
+[    0.170000] [GPIO CFG] IR LED CTL    (55)
+[    0.170000] [GPIO CFG] IR CUT1       (55)
+[    0.170000] [GPIO CFG] IR CUT2       (55)
+[    0.180000] [GPIO CFG] SENSOR Reset  (27)
+[    0.180000] [GPIO CFG] PHY Reset     (7)
+[    0.190000] [GPIO CFG] PHY Speed Led (19)
+[    0.190000] [GPIO CFG] SPI0 EN       (55)
+[    0.200000] [GPIO CFG] SPI1 EN       (55)
+[    0.200000] [GPIO CFG] USB HOST      (55)
+[    0.210000] [GPIO CFG] SD Detect     (55)
+[    0.210000] [GPIO CFG] SD Power      (55)
+[    0.210000] [GPIO]#############################
+[    0.220000] gpiochip_add: registered GPIOs 0 to 63 on device: gk-gpio0
+[    0.230000] create proc dir
+[    0.230000] gk register devices 10
+[    0.230000] gk register I2C
+[    0.250000] bio: create slab <bio-0> at 0
+[    0.260000] spi spi.0: gk SPI Controller 0 created 
+[    0.260000] spi spi.0: master is unqueued, this is deprecated
+[    0.270000] spi spi.1: gk SPI Controller 1 created 
+[    0.270000] spi spi.1: master is unqueued, this is deprecated
+[    0.280000] usbcore: registered new interface driver usbfs
+[    0.290000] usbcore: registered new interface driver hub
+[    0.290000] usbcore: registered new device driver usb
+[    0.300000] i2c regbase: 0xf3003000 
+[    0.300000] i2c i2c.0: i2c irq:registers 9
+[    0.310000] i2c i2c.0: GK I2C[0] adapter[i2c-0] probed!
+[    0.310000] i2c regbase: 0xf3004000 
+[    0.320000] i2c i2c.1: i2c irq:registers 58
+[    0.320000] i2c i2c.1: GK I2C[1] adapter[i2c-1] probed!
+[    0.330000] FS-Cache: Loaded
+[    0.340000] cfg80211: Calling CRDA to update world regulatory domain
+[    0.350000] CacheFiles: Loaded
+[    0.360000] gk-sd gk-sd.0: Slot0 req_size=0x00010000, segs=16, seg_size=0x00010000
+[    0.390000] gk-sd gk-sd.0: GK SD/MMC[0] has 1 slots @ 50181818Hz, [0x09e130b0:0x00000000]
+[    0.400000] NET: Registered protocol family 2
+[    0.400000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.410000] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.420000] TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.430000] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.430000] TCP: reno registered
+[    0.440000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.440000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.450000] NET: Registered protocol family 1
+[    0.460000] RPC: Registered named UNIX socket transport module.
+[    0.470000] RPC: Registered udp transport module.
+[    0.470000] RPC: Registered tcp transport module.
+[    0.480000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.560000] mdma init...
+[    0.560000] mdma request irq: 54 
+[    0.570000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.580000] NFS: Registering the id_resolver key type
+[    0.590000] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.600000] msgmni has been set to 57
+[    0.600000] mmc0: new SDHC card at address 0001
+[    0.620000] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+[    0.620000] io scheduler noop registered
+[    0.630000] io scheduler deadline registered
+[    0.630000] io scheduler cfq registered (default)
+[    0.640000] uart.0: ttySGK0 at MMIO 0xa0005000 (irq = 31) is a gkuart
+[    0.650000] uart.1: ttySGK1 at MMIO 0xa001f000 (irq = 15) is a gkuart
+[    0.650000] uart.2: ttySGK2 at MMIO 0xa001e000 (irq = 27) is a gkuart
+[    0.670000] brd: module loaded
+[    0.680000] loop: module loaded
+[    0.680000] adc initialized (10:11)
+[    0.690000] speed_mod is 0
+[    0.690000] USE 1X mode read and 1X mode write
+[    0.700000] gk_flash gk_flash.0: XM25QH128 (16384 Kbytes)
+[    0.700000] 3 cmdlinepart partitions found on MTD device gk_flash
+[    0.710000] Creating 3 MTD partitions on "gk_flash":
+[    0.720000] 0x000000000000-0x000000050000 : "U"
+[    0.720000] 0x000000050000-0x0000002b0000 : "K"
+[    0.730000] 0x0000002b0000-0x000001000000 : "A"
+[    0.740000] slram: not enough parameters.
+[    0.740000] GKETH_init
+[    0.740000] [GKETH_drv_probe] eth_base = 0xf200e000
+[    0.750000] mii id = 0 
+[    0.750000] ###### PHY Reset.1.0.2
+[    0.870000] mdiobus_register: PHY[0] whose id 0x00000000 
+[    0.880000] goke MII Bus: probed
+[    0.880000] gk-eth gk-eth.0: MAC Address[02:11:22:a3:a0:00].
+[    0.890000] musb-hdrc: version 6.0, ?dma?, otg (peripheral+host)
+[    0.900000] musb phy Begin initial sequence ...
+[    1.200000] gk musb init end...
+[    1.210000] dma_controller_create_non_init ok
+[    1.210000] musb-hdrc musb-hdrc: MUSB HDRC host driver
+[    1.220000] musb-hdrc musb-hdrc: new USB bus registered, assigned bus number 1
+[    1.230000] hub 1-0:1.0: USB hub found
+[    1.230000] hub 1-0:1.0: 1 port detected
+[    1.240000] musb-hdrc musb-hdrc: USB Host mode controller at f0006000 using DMA, IRQ 26
+[    1.250000] platform add gk musb...
+[    1.250000] mousedev: PS/2 mouse device common for all mice
+[    1.260000] input: GKInput as /devices/virtual/input/input0
+[    1.260000] Protocol NEC[0]
+[    1.270000] ir request irq: 62 
+[    1.270000] IR Host Controller probed!
+[    1.270000] gk rtc init...
+[    1.280000] rtc base: 0xf2080000 
+[    1.280000] os read tm: t=0 
+[    1.280000] gk-rtc gk-rtc: rtc core: registered gk-rtc as rtc0
+[    1.290000] i2c /dev entries driver
+[    1.300000] gk_wdt_v1_00: GK Watchdog Timer, (c) 2014 Goke Microelectronics
+[    1.300000] [gk_wdt_init]: init
+[    1.310000] [gk_wdt_probe]: probe
+[    1.310000] [gk_wdt_probe]: probe mapped wdt_base=f3006000
+[    1.320000] watchdog inactive, reset disabled, irq disabled
+[    1.320000] mmcblk0: mmc0:0001 00000 7.30 GiB 
+[    1.330000]  mmcblk0: p1
+[    1.340000] IPv4 over IPv4 tunneling driver
+[    1.340000] gre: GRE over IPv4 demultiplexor driver
+[    1.350000] ip_gre: GRE over IPv4 tunneling driver
+[    1.360000] TCP: cubic registered
+[    1.360000] Initializing XFRM netlink socket
+[    1.370000] NET: Registered protocol family 10
+[    1.370000] IPv6 over IPv4 tunneling driver
+[    1.380000] NET: Registered protocol family 17
+[    1.390000] NET: Registered protocol family 15
+[    1.390000] Registering the dns_resolver key type
+[    1.400000] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+[    1.410000] os read tm: t=0 
+[    1.410000] gk-rtc gk-rtc: setting system clock to 1970-01-01 00:00:00 UTC (0)
+[    1.440000] Freeing init memory: 2524K
+mount: can't find /dev/pts in /etc/fstab
+[    1.690000] usb 1-1: new high-speed USB device number 2 using musb-hdrc
+/init: line 9: ./btools: not found
+Starting logging: /etc/init.d/S01logging: line 24: start-stop-daemon: not found
+/etc/init.d/S01logging: line 24: start-stop-daemon: not found
+OK
+Starting mdev...
+Initializing random number generator... done.
+Starting network...
+/etc/init.d/S40network: line 22: /sbin/ifup: not found
+GOKE 7102S BOARD 20170515 START:
+Press 'q' in 1 seconds to exit: [    6.500000] hal: module license 'Proprietary' taints kernel.
+[    6.500000] Disabling lock debugging due to kernel taint
+[    6.530000] crypto initialized (10:11)
+[    6.640000] 
+Media driver version (gcc version 4.6.1 (crosstool-NG 1.18.0) (uClibc)) v2.0.0 #svn r11887 Thu Apr 27 14:04:15 CST 2017
+[    6.740000]  request_irq...24 ok-- video_sync
+[    6.740000]  request_irq...59 ok-- video_frame_last_pixel
+[    6.750000]  request_irq...61 ok-- video_frame
+GOKE ADI: R(10973) LIBC(uClibc) (gcc version 4.6[    6.880000] sensor board reset...
+.1 (crosstool-NG 1.18.0) ) 2016-11-16 10:00:45
+[    7.140000] detect:imx122 at 0x34
+[    7.140000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.150000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.160000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.160000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.170000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.180000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.180000] imx122 i2c read 0x00000000 is 0x00000000
+[    7.190000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.190000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.200000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.210000] i2c i2c.0: I2C state 0x9, please check address 0x34!
+[    7.210000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.220000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.230000] imx122 i2c read 0x00000001 is 0x00000000
+[    7.230000] detect:imx291 at 0x34
+[    7.240000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.240000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.250000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.260000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.260000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.270000] i2c i2c.0: I2C state 0x10, please check address 0x34!
+[    7.280000] imx291 i2c read 0x000031d8 is 0x00000000
+[    7.280000] detect:jxh42 at 0x6c
+[    7.290000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.290000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.300000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.310000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.310000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.320000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.330000] jxh42 i2c read 0x0000000a is 0x00000000
+[    7.330000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.340000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.340000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.350000] i2c i2c.0: I2C state 0x9, please check address 0x6c!
+[    7.360000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.360000] i2c i2c.0: I2C state 0x9, please check address 0x6c!
+[    7.370000] jxh42 i2c read 0x0000000b is 0x00000000
+[    7.380000] detect:jxh61 at 0x6c
+[    7.380000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.390000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.390000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.400000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.410000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.410000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.420000] jxh61 i2c read 0x0000000a is 0x00000000
+[    7.430000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.430000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.440000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.440000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.450000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.460000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.470000] jxh61 i2c read 0x0000000b is 0x00000000
+[    7.470000] detect:jxh62 at 0x6c
+[    7.470000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.480000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.490000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.490000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.500000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.510000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.510000] jxh62 i2c read 0x0000000a is 0x00000000
+[    7.520000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.530000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.530000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.540000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.550000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.550000] i2c i2c.0: I2C state 0x10, please check address 0x6c!
+[    7.560000] jxh62 i2c read 0x0000000b is 0x00000000
+[    7.560000] detect:jxf22 at 0x8c
+[    7.570000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.570000] i2c i2c.0: I2C state 0x10, please check address 0x8c!
+[    7.580000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.590000] i2c i2c.0: I2C state 0x10, please check address 0x8c!
+[    7.600000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.600000] i2c i2c.0: I2C state 0x10, please check address 0x8c!
+[    7.610000] jxf22 i2c read 0x0000000a is 0x00000000
+[    7.610000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.620000] i2c i2c.0: I2C state 0x9, please check address 0x8c!
+[    7.630000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.630000] i2c i2c.0: I2C state 0x10, please check address 0x8c!
+[    7.640000] i2c i2c.0: i2c[60]:gk_i2c_irq in wrong state[0x9]
+[    7.650000] i2c i2c.0: I2C state 0x10, please check address 0x8c!
+[    7.650000] jxf22 i2c read 0x0000000b is 0x00000000
+[    7.660000] detect:sc1035 at 0x60
+[    7.660000] sc1035 i2c read 0x00003107 is 0x00000021
+[    7.670000] sc1035 i2c read 0x00003108 is 0x00000035
+[    7.670000] detect:sc1135 at 0x60
+[    7.680000] sc1135 i2c read 0x00003107 is 0x00000021
+[    7.680000] sc1135 i2c read 0x00002148 is 0x00000000
+[    7.690000] detect:sc2035 at 0x60
+[    7.690000] sc2035 i2c read 0x00003107 is 0x00000021
+[    7.700000] sc2035 i2c read 0x00003108 is 0x00000035
+[    7.700000] detect:sc2135 at 0x60
+[    7.710000] sc2135 i2c read 0x00003107 is 0x00000021
+[    7.710000] sc2135 i2c read 0x00003108 is 0x00000035
+[    7.720000] ===================================================
+[    7.730000] ================find:sc2135 at 0x60================
+[    7.730000] ===================================================
+find:sc2135 at 0x60
+rm: can't remove '/tmp/sensor_hw.bin': No such file or directory
+rm: can't remove '/tmp/sensor_ex.ko': No such file or directory
+[    8.030000] gpio_dev init suc
+exec factory_tool.sh .......
+ls: /mnt/*-hwcfg.ini: No such file or directory
+ls: /mnt/*-VOICE.tgz: No such file or directory
+ls: /mnt/*-ptz.cfg: No such file or directory
+ls: /mnt/*-hardinfo.bin: No such file or directory
+[    9.390000] usbcore: registered new interface driver rtl8188fu
+[   11.220000] ADDRCONF(NETDEV_UP): wlan0: link is not ready
+ifconfig: SIOCGIFFLAGS: No such device
+[   11.260000] net eth0: ###### GKETH_start_hw
+[   11.270000] net eth0: ###### GKETH_phy_start_aneg...
+[   11.270000] ADDRCONF(NETDEV_UP): eth0: link is not ready
+/tmp/start.sh: line 111: /tmp/tees: not found
+listen on port 3201.
+mv: can't rename '/home/gkptz-dsa.ko': No such file or directory
+[   13.620000] initlializing ptz...
+[   13.630000] 
+[   13.630000] Parameters of PTZ driver:
+[   13.630000] 	test_max_pos = 0
+[   13.630000] 	max_pps = 200
+[   13.640000] 		pulse interval: 100/200 = 0
+[   13.640000] 	xchg_dir = 0
+[   13.640000] 	hspd_slfck = 60
+[   13.650000] 	vspd_slfck = 40
+[   13.650000] 	hspd_normal = 0
+[   13.650000] 	vspd_normal = 0
+[   13.660000] 	hspd_reloc = 30
+[   13.660000] 	vspd_reloc = 10
+[   13.660000] 	spd_zoom = 3
+[   13.670000] 	hmotor_upbound = 520
+[   13.670000] 	vmotor_upbound = 180
+[   13.670000] 	zmotor_upbound = 130
+[   13.680000] 	no_selfck = 0
+[   13.680000] 	other_flags = 0
+[   13.680000] 		other_flags: 
+[   13.680000] 			0x0001  --- Return to center when power on
+[   13.680000] 			0x0002  --- Z-Motor only
+[   13.680000] 			0x0004  --- No self-check
+[   13.680000] 			0x0008  --- Ignore position
+[   13.680000] 			0x0010  --- Respect spd_slfck
+[   13.680000] 			0x0020  --- No posotion-switch detection
+[   13.690000] 	motor pins: 21,22,23,GK710XS dsa-ptz device driver[2017.06.28] initialized.
+/bin/sh: -l: not found
+Auto login as root ...
+Jan  1 00:00:13 login[172]: root login on 'ttySGK0'
+
+
+
+BusyBox v1.20.2 (2017-02-06 10:11:31 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+��APP START��:
+========v2 pthread statck size 131072===
+eye+ wait. av[0] id[0] testMode[0]
+
+
+
+===============================
+  ver: 3.1.1.0908
+===============================
+
+
+
+========v2 pthread statck size 32768===
+========v2 pthread statck size 32768===
+gk ic type 1[0- 7102S; 1-7102]
+gpio15, 4 parts, pinmux reg[0x0]:[0x0], effectValue[0]
+gpio15, 4 parts, pinmux reg[0x0]:[0x0], effectValue[0]
+gpio30, 4 parts, pinmux reg[0x0]:[0x0], effectValue[0]
+gpio-1, 1 parts, pinmux reg[0x0]:[0x0], effectValue[0]
+gpio39, 4 parts, pinmux reg[0x0]:[0x1], effectValue[1]
+gpio46, 4 parts, pinmux reg[0x0]:[0x0], effectValue[1]
+gpio40, 4 parts, pinmux reg[0x0]:[0x0], effectValue[1]
+[HW] auto_reboot : 1
+[HW] support_ptz : 1
+[HW] ptz_one_step : 2
+[HW] sensor_position : 0
+[HW] support_eth : 1
+[HW] main_bps : 768
+[HW] main_fps : -1
+[HW] support_fisheye : 0
+[HW] local_quality_auto : 1
+[HW] voice_prompt : 1
+[HW] sound_detect : 1
+[HW] sound_level : 98
+[HW] motion_level : 1
+[HW] support_twoway_speech : 0
+[HW] ir_detect_type : 2
+[HW] adc_chan : 0
+[HW] adc_setting_max : 700
+[HW] adc_setting_min : -300
+[HW] buzzer_time : 30
+[HW] cds_lvl_night : 1
+[HW] ircut_reverse : 0
+[HW] ircut1_lvl : 1
+[HW] ircut2_lvl : 1
+[HW] ir_light_lvl : 1
+[HW] support_433 : 0
+[HW] support_onvif : 1
+---------open /tmp/sc2135 ok
+[HW] gk_mirror_type : 0
+[HW] max_pps : -1
+[HW] max_pps : -1
+[HW] xchg_dir : -1
+[HW] xchg_dir : -1
+[HW] other_flags : -1
+[HW] other_flags : -1
+[HW] hmotor_upbound : -1
+[HW] hmotor_upbound : -1
+[HW] vmotor_upbound : -1
+[HW] vmotor_upbound : -1
+[HW] hspd_normal : -1
+[HW] hspd_normal : -1
+[HW] vspd_normal : -1
+[HW] vspd_normal : -1
+[HW] hspd_slfck : -1
+[HW] hspd_slfck : -1
+[HW] vspd_slfck : -1
+[HW] vspd_slfck : -1
+[HW] hspd_reloc : -1
+[HW] hspd_reloc : -1
+[HW] vspd_reloc : -1
+[HW] vspd_reloc : -1
+######Get Hardware Info: model:CloudCamera,  firmware-ident:eyeplus_ipc_gk_002
+GPIO: RedLed[15], BlueLed[15], BoardReset[30] ptzSupport[1], LocalImageAuto[1] promptVoice[1]...
+GPIO open success. GIO fd = 5
+ERROR: gpio = -1 return !
+ERROR: gpio = -1 return !
+ERROR: gpio = -1 return !
+ERROR: gpio = -1 return !
+ERROR: gpio = -1 return !
+reset sensor ######
+0: Watchdog started... feed interval 15 seconds.
+Watchdog wd_setTimeOut [15] complete.
+# silent_reboot_time = 976
+---------open /home/silent_reboot failed
+sys init finished.
+---------open /home/cls.conf failed
+��⵽Ϊ����汾
+---------open /mnt/mmc01/cls.conf failed
+GET EYE SER: DEVICE ID REMOVED
+linktest(eth0) = [   15.300000] ADDRCONF(NETDEV_UP): wlan0: link is not ready
+0
+wlan0 is linked.
+initWlanIf start......[dhcp 1]
+ ioctl[SIOCSIWAP]: Operation not permitted
+eye+ wait. av[0] id[1] testMode[0]
+start udhcpc on wlan0........
+udhcpc: option -h NAME is deprecated, use -x hostname:NAME
+udhcpc (v1.20.2) started
+Sending discover...
+[   19.450000] ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+             total         used         free       shared      buffers
+Mem:         31908        19816        12092            0            0
+-/+ buffers:              19816        12092
+Swap:            0            0            0
+eye+ wait. av[0] id[1] testMode[0]
+Sending discover...
+Sending select for 192.168.1.147...
+Lease of 192.168.1.147 obtained, lease time 86400
+deleting routers
+route: SIOCDELRT: No such process
+adding dns 192.168.1.1
+initWlanIf OK......
+ NET INTERFACE is wlan0
+avEncInit start, sensorMode = 11
+GOKE ADI: R(12529) LIBC(uClibc) (gcc version 4.6.1 (crosstool-NG 1.18.0) ) 2017-08-09 16:00:24
+[PRI] firmware version:6080.
+
+Image library version (gcc version 4.6.1 (crosstool-NG 1.18.0) (uClibc)) v2.0.0 #svn r11883 Thu Apr 27 10:01:52 CST 2017
+[   21.410000] ===================================================
+[   21.410000] =====sc2135 drv create at 20161014 ver:20170210====
+[   21.420000] ===================================================
+[   21.430000] [sensor_get_dev_id 276]find sensor id: 00002135
+[   21.440000] sensor board reset...
+===========================gadi_venc_map_dsp call======================
+got sensor size: 1920x1080
+viParams:
+resoluMode=0x991e021c, frameRate=25, mirrorMode={0,0}
+
+stream_formats:
+streamId encodeType channelId flipRotate width height xOffset yOffset fps keepAspRat
+       0          1         0          0  1920   1080       0       0  12 0
+       1          1         1          0   640    360       0       0  12 0
+       2          0         2          0   320    180       0       0  12 0
+       3          2         1          0   640    360       0       0   3 0
+
+h264Conf:
+streamId brcMode cbrAvgBps gopM gopModel gopN idrInterval profile reEncMode vbrMaxbps vbrMinbps
+       0       1    400000    1        0   80           1       0         1    384000     80000
+       1       1    130000    1        0   80           1       0         1    200000     60000
+       2       1    200000    1        0   50           1       0         1    400000    100000
+       3       1    200000    1        0   50           1       0         1    400000    100000
+
+chanParams:
+chan1Type=1, chan1Width=1920, chan1Height=1080
+chan2Type=1, chan2Width=640, chan2Height=360
+chan3Type=0, chan3Width=320, chan3Height=180
+chan4Type=0, chan4Width=0, chan4Height=0
+[   22.770000] sensor board reset...
+eye+ wait. av[0] id[1] testMode[0]
+[   23.080000] win_height:0 win_width:0
+[   23.080000] win_height:0 win_width:0
+############################## venc_isp_start##########################
+start stream[0]
+=======================================
+[GK]DE-MBLK 4x4 basing on 1/16 orig pic version: v2.1.0
+=======================================
+start stream[1]
+start stream[3]
+VENC INIT OK!
+audio frame size: 160
+gadi_audio_ao_set_volume 0xb9
+/etc/sensors/sc2135.bin/etc/sensors/sc2135.binbin file name :sc2135
+size is 194276
+[Loading] sensor bin:sc2135.bin
+
+Handle next connect...
+gk_md_start
+----------------soundDetectInit: sensitivity[98]
+========v2 pthread statck size 32768===
+========v2 pthread statck size 32768===
+getMainStreamVideoSize: w 1920 h 1080 [res = 0xa]
+================CHANGE BPS [768] AND FPS [12]=================
+#####GOKE_change_bpsfps bpsType = 1 bps = 768 fps = 12 keyFrmae = 60(not use now), quant = 2
+------------------venc_video_set_qp--------------
+qpMaxOnI[38], qpMaxOnP[45], qpMinOnI[32], qpMinOnP[35]
+#####GOKE_change_bpsfps bpsType = 1 bps = 256 fps = 12 keyFrmae = 60(not use now), quant = 2
+------------------venc_video_set_qp--------------
+qpMaxOnI[38], qpMaxOnP[45], qpMinOnI[32], qpMinOnP[35]
+========v2 pthread statck size 32768===
+========v2 pthread statck size 32768===
+========v2 pthread statck size 32768===
+--------------SONG TOOL INIT------------
+Sender Inited
+========v2 pthread statck size 32768===
+---------open /opt/upgrading failed
+rd storage = /mnt/mmc01/0
+local_create_root, root_path = /mnt/mmc01
+MountLocalPartitions......
+mount t=vfat dev=/dev/mmcblk0p1 mp=/mnt/mmc01/0
+CTP Server Started at  8001
+local_create_root, root_path = /mnt/mmc01/0
+open .recording: /mnt/mmc01/0/.recording
+eye+ wait. av[1] id[1] testMode[0]
+getVideoStandard : 0
+[gk_isp_daynight]gadi_venc_set_framerate:streamid:0,fps:12 
+[gk_isp_daynight]gadi_venc_set_framerate:streamid:1,fps:12 
+gk_isp_daynight: set day mode
+#####IR CUT in Day Mode.
+========v2 pthread statck size 32768===
+========v2 pthread statck size 32768===
+========v2 pthread statck size 32768===
+---------ip got, start onvif-----------
+------------uuid is UUID REMOVED and mac = MAC REMOVED
+getMainStreamVideoSize: w 1920 h 1080 [res = 0xa]
+getMainStreamVideoSize: w 1920 h 1080 [res = 0xa]
+getMainStreamVideoSize: w 1920 h 1080 [res = 0xa]
+getMainStreamVideoSize: w 1920 h 1080 [res = 0xa]
+-------------------eye+ init---------------
+vendor.moduleid: eyeplus_ipc_gk_002
+=============CreateDevicePtz OK =============
+CreateDevicePlayback
+eye+ sdk version: 9478
+remote hello ret =========  
+----------->GetDeviceId buf DEVICE ID REMOVED
+--------------DevSystem_GetMacAddr MAC: MAC REMOVED
+[LECAM] [00:00:26] curl_global_init(CURL_GLOBAL_ALL) OK
+[LECAM] [00:00:26] version : libcurl/7.49.1 wolfSSL/3.9.10 c-ares/1.10.0 nghttp2/1.11.1
+[UPNS_SDK] [00:00:26] Construct: CURL Global init result:0
+ version : libcurl/7.49.1 wolfSSL/3.9.10 c-ares/1.10.0 nghttp2/1.11.1
+connect: Network is unreachable
+remote hello ret =========  
+connect: Network is unreachable
+num of local partions: 1
+check /mnt/mmc01/0/DUMPLOG
+-------------->init sd record, buffer is 1024KB
+Wrong date/time of system
+sd record init ok.
+time synced.
+========v2 pthread statck size 65536===
+GetDefaultConfig, get DeviceType
+AudioEncode = G711A
+[OnStatus]--------status: 0x103
+[OnStatus]--------logging!
+==============>SetAntiflicker called frequence = 50
+==============>Rotate called angle = 0
+cameraMirror same mirror, do not effect!
+=============>SetQuality called quality = 1 chan = 0
+Buzzer = Yes
+OnBuzzer: on=0, time=0
+SupportPTZ = Yes
+SetPresetPosition: on:1, position:0.010147,0.000001,0.010148, timeout:1
+SDCard = Yes
+SetRecordMode: mode=2
+!!!!!!!!!!!!!!!!!LedSwitch : 1
+==============>SetNightMode mode = 2
+-------------timezone is 3600
+[OnStatus]--------status: 0x106
+[OnStatus]--------logout server success!
+remote hello ret =========  
+connect: Network is unreachable
+-----------CloseliCamera_IsRegister: 0
+Device's binding status: 0, user: (null)
+Begin___, mode: 0, username: 
+[OnStatus]--------status: 0x104
+[OnStatus]--------logon server success!
+GetConnectedWifi: -----ssid: SSID-REMOVED
+=============>DevVideo_GetSize called
+getMainStreamVideoSize: w 1920 h 1080 [res = 0xa]
+SoundDetect = Yes
+NoMicphone = No
+NoLed = Yes
+Buzzer = Yes
+FullDuplexSpeech = No
+SDCard = Yes
+SupportPTZ = Yes
+---------------SetServicePlan plan 0 days 7
+msgQReceive sd playback timeout
+==============>SetAntiflicker called frequence = 50
+==============>Rotate called angle = 0
+cameraMirror same mirror, do not effect!
+=============>SetQuality called quality = 1 chan = 0
+Buzzer = Yes
+OnBuzzer: on=0, time=30
+SupportPTZ = Yes
+SetPresetPosition: on:0, position:0.500000,0.500000,0.000000, timeout:30
+SDCard = Yes
+SetRecordMode: mode=2
+!!!!!!!!!!!!!!!!!LedSwitch : 1
+==============>SetNightMode mode = 2
+-------------timezone is 3600
+=============>DevVideo_GetSize called
+getMainStreamVideoSize: w 1920 h 1080 [res = 0xa]
+[OnStatus]--------status: 0x104
+[OnStatus]--------logon server success!
+!!!!!!!!!!!!!!!!!LedSwitch : 1
+==============>SetNightMode mode = 2
+[OnStatus]--------status: 0x107
+[OnStatus]--------wakeup!
+[OnStatus]--------status: 0x103
+[OnStatus]--------logging!
+Logging in. 
+[OnStatus]--------status: 0x104
+[OnStatus]--------logon server success!
+msgQReceive sd playback timeout
+========v2 pthread statck size 32768===
+closeliSdcardEvent status: 3
+closeliSdcardEvent status: 3
+storage is ready.
+got picture.
+sync thumb jpg file..
+msgQReceive sd playback timeout

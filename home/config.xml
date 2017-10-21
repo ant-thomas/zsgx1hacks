@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<profile>
+    <general>
+        <title>Camera</title>
+        <description>audio=2</description>
+        <webSocket></webSocket>
+        <status>On</status>
+        <volumeMute>Off</volumeMute>
+        <scheduleTurnOff>
+            <status>On</status>
+            <schedules />
+        </scheduleTurnOff>
+        <scheduleNotUpload>
+            <status>Off</status>
+            <schedules />
+        </scheduleNotUpload>
+        <scheduleMute>
+            <status>On</status>
+            <schedules />
+        </scheduleMute>
+        <DVRPlan>2-Week trial</DVRPlan>
+        <motionDetection>On</motionDetection>
+        <motionSensitivity>80</motionSensitivity>
+        <motionSensitivityLevel>0</motionSensitivityLevel>
+        <soundDetection>On</soundDetection>
+        <soundSensitivity>90</soundSensitivity>
+        <soundSensitivityLevel>0</soundSensitivityLevel>
+        <faceDetection>On</faceDetection>
+        <faceSensitivity>1</faceSensitivity>
+        <recordTo>ArcSoftCloud</recordTo>
+        <infraredLight>Auto</infraredLight>
+        <scheduleInfraredLight>
+            <status>Off</status>
+            <schedules />
+        </scheduleInfraredLight>
+        <nightVision>Auto</nightVision>
+        <scheduleNightVision>
+            <status>Off</status>
+            <schedules />
+        </scheduleNightVision>
+        <cloudRecord>On</cloudRecord>
+        <scheduleCloudRecord>
+            <status>Off</status>
+            <schedules />
+        </scheduleCloudRecord>
+        <statusLight>On</statusLight>
+        <HDVideo>On</HDVideo>
+        <backgroundAudioStreaming>Off</backgroundAudioStreaming>
+        <timeZone>Europe/London GMT+1:00 offset 3600</timeZone>
+        <wifiNetWork>dd-wrt</wifiNetWork>
+        <deviceId></deviceId>
+        <macAddress></macAddress>
+        <deviceType></deviceType>
+        <videoQuality>high</videoQuality>
+        <zoomScale>0</zoomScale>
+        <cameraSound>On</cameraSound>
+        <antiFlicker>50</antiFlicker>
+        <cameraImageRotate>0</cameraImageRotate>
+        <motionRegions />
+        <notificationInterval>10</notificationInterval>
+        <magicZoom>
+            <ratio>1000</ratio>
+            <xOffset>0</xOffset>
+            <yOffset>0</yOffset>
+        </magicZoom>
+        <networkQuality>1</networkQuality>
+        <wifiQuality>0</wifiQuality>
+        <pirDetection>On</pirDetection>
+        <batteryMode>Off</batteryMode>
+        <mechicalShutter>On</mechicalShutter>
+        <nightVisionSensitivity>
+            <open>934</open>
+            <close>848</close>
+            <level>0</level>
+        </nightVisionSensitivity>
+        <phoneNotification>On</phoneNotification>
+        <emailNotification>Off</emailNotification>
+        <tamperDetection>On</tamperDetection>
+        <offlineConfig>On</offlineConfig>
+        <temperature>28</temperature>
+        <personSchedules>
+            <status>Off</status>
+            <schedules />
+        </personSchedules>
+        <personStatus>Off</personStatus>
+        <sdCard>
+            <status>3</status>
+            <recordModel>2</recordModel>
+        </sdCard>
+        <model></model>
+        <imageType>0</imageType>
+        <speechRecognition>Off</speechRecognition>
+        <reboot>On</reboot>
+        <log>On</log>
+    </general>
+    <alerts>
+        <sendAlerts>On</sendAlerts>
+        <sendMotionAlerts>On</sendMotionAlerts>
+        <sendSoundAlerts>On</sendSoundAlerts>
+        <sendOfflineAlerts>On</sendOfflineAlerts>
+        <scheduleNotSendAlerts>
+            <status>On</status>
+            <schedules />
+        </scheduleNotSendAlerts>
+    </alerts>
+</profile>
