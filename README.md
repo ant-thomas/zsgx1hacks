@@ -14,10 +14,17 @@ Achieved so far
 * Block cloud services via hosts file
 
 ToDo
-* Figure out GPIO control for PTZ, IR and IR Cut
+* Figure out GPIO control for PTZ, IR and IR Cut, Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Add an SSH server (dropbear)
+
+2017-10-22 - Update 5
+* IR Cut and IR LED GPIOs found and controllable
+* ```gio -s 40 1``` IR Cut - night
+* ```gio -s 40 0``` IR Cut - day
+* ```gio -s 46 1``` IR LEDs - on
+* ```gio -s 46 0``` IR LEDs - off
 
 2017-10-22 - Update 4
 * SD card contents moved to SD card folder
