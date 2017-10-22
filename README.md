@@ -25,7 +25,18 @@ ToDo
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Add an SSH server (dropbear)
 
-2017-10-22 - Update 6 - (DJWillis) Just adding some notes so they don't get lost.
+2017-10-22 - Update 7 - (DJWillis)
+
+* I am not saying the closed source p2pcam blob looks dodgy or anything but this did make me smile (from ```/home/factory_tool.sh```)
+
+``` 
+   #avoid p2pcam auto format tf card!!!
+   rm -f /bin/mkdosfs
+   rm -f /sbin/mkdosfs
+```
+That feels like the right way to work around some awesome design considerations :).
+
+2017-10-22 - Update 6 - (DJWillis) 
 
 * Firmware can be updated from a ```firmware.bin``` file on the root of the SD card (formatted vfat). 
    This is a JFFS2 image structured much like other generic cameras based on the GOKE SoC's and a good few better know brands.
