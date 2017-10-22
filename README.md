@@ -1,10 +1,13 @@
 # ZS-GX1 Hacks
 Record of attempted hacks on the ZS-GX1 IP Camera
 
-For context, this is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was available on Gearbest for around £12. I bought 2 in an attempt to hack them as the reason they are so cheap is due to them being locked to paid cloud services.
+This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was available on Gearbest for around £12. I bought 2 in an attempt to hack them as the reason they are so cheap is due to them being locked to paid cloud services.
 
 SOC - GOKE - GK7102
 https://www.unifore.net/company-highlights/goke-hd-ip-camera-solution-gk7101-gk7102.html
+
+Sensor - SC2135 - supposedly capable of 1080p 30fps
+https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensors.html
 
 Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
