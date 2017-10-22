@@ -6,6 +6,9 @@ For context, this is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a ti
 SOC - GOKE - GK7102
 https://www.unifore.net/company-highlights/goke-hd-ip-camera-solution-gk7101-gk7102.html
 
+2017-10-22 - Update 3
+* RTSP server user/pass - admin/admin - Presents a 1920x1080 12fps stream on rtsp://IPADDRESS/ (no audio)
+
 2017-10-21 - Update 2
 * home folder uploaded
 * p2pcam.tar.gz is the interesting file - this gets extracted on boot and p2pcam is the camera software.
