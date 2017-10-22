@@ -5,6 +5,7 @@
 cp /bin/busybox /bin/busybox-orig
 # copies new busybox binary
 cp /mnt/busybox-armv6l /bin/busybox
-
+cp /etc/hosts /etc/hosts.orig
+cp /mnt/hosts.new /etc/hosts
 # update root password to root - login via telnet now possible
 (sleep 20 && echo "root:o.eyOMtPAPfbg:0:0:root:/root/:/bin/sh" > /etc/passwd && cat /etc/passwd ) &
