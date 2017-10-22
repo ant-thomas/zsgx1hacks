@@ -8,6 +8,8 @@ https://www.unifore.net/company-highlights/goke-hd-ip-camera-solution-gk7101-gk7
 
 2017-10-22 - Update 3
 * RTSP server user/pass - admin/admin - Presents a 1920x1080 12fps stream on rtsp://IPADDRESS/ (no audio)
+* Attempted to not run ```p2pcam``` by editing out specific parts of ```start.sh```, this resulting in the WiFi connection not being created. Maybe running ```wpa_supplicant``` via ```debug_cmd.sh``` may fix that.
+* As the RTSP server seems to be created by ```p2pcam``` it might be possible to prevent the cloud software communicating outwards by using various hosts file listings.
 
 2017-10-21 - Update 2
 * home folder uploaded
