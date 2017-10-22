@@ -28,7 +28,7 @@ ToDo
 2017-10-22 - Update 6 - (DJWillis) Just adding some notes so they don't get lost.
 
 * Firmware can be updated from a ```firmware.bin``` file on the root of the SD card (formatted vfat). 
-   This is a JFFS2 image structured much like other generic cameras based on the GOKE SoC's and a good few better know brands like some of the TENVIS cameras.
+   This is a JFFS2 image structured much like other generic cameras based on the GOKE SoC's and a good few better know brands.
    Suspect this will be distrubuted as one section per partition. With the kernel and uboot not normally being flashed.
    The tool used to flash the images is ```sdc_tool```.
    https://github.com/zzerrg/gmfwtools should be usable with the right key and board ident (1003) to unpack and repack the userspace firmware into something we can flash. It may also make cross flashing userspaces possible. Right now however you may well end up with a bricked camera or at least needing serial so try at your own risk.
