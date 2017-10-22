@@ -12,6 +12,7 @@ Achieved so far
 * Upgrade busybox
 * RTSP server accessible - rtsp://IPADDRESS/ user/pass admin/admin
 * Block cloud services via hosts file
+* Some GPIO functions found (IR LEDs and IR Cut)
 
 ToDo
 * Figure out GPIO control for PTZ, IR and IR Cut, Light sensor
