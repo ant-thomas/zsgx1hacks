@@ -1,10 +1,27 @@
-# zsgx1hacks
+# ZS-GX1 Hacks
 Record of attempted hacks on the ZS-GX1 IP Camera
 
 For context, this is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was available on Gearbest for around £12. I bought 2 in an attempt to hack them as the reason they are so cheap is due to them being locked to paid cloud services.
 
 SOC - GOKE - GK7102
 https://www.unifore.net/company-highlights/goke-hd-ip-camera-solution-gk7101-gk7102.html
+
+Achieved so far
+* ```debug_cmd.sh``` on an SD card enables commands to be run
+* Change root password to enable telnet login
+* Upgrade busybox
+* RTSP server accessible - rtsp://IPADDRESS/ user/pass admin/admin
+* Block cloud services via hosts file
+
+ToDo
+* Figure out GPIO control for PTZ, IR and IR Cut
+* Change bitrate of RTSP stream
+* Get rid of ```p2pcam``` and use an alternative RTSP server
+* Add an SSH server (dropbear)
+
+2017-10-22 - Update 4
+* SD card contents moved to SD card folder
+* Updated hosts file included which looks like it prevents the camera from contacting the cloud services. The app shows the camera as disconnected and I'm seeing no activity on my router. RTSP server remains active.
 
 2017-10-22 - Update 3
 * RTSP server user/pass - admin/admin - Presents a 1920x1080 12fps stream on rtsp://IPADDRESS/ (no audio)
