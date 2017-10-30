@@ -11,6 +11,13 @@ https://www.unifore.net/company-highlights/goke-hd-ip-camera-solution-gk7101-gk7
 Sensor - SC2135 - supposedly capable of 1080p 30fps
 https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensors.html
 
+Instructions
+* WiFi - setup camera via app
+* Ethernet - plug in to network
+* Download contents of ```sdcard``` folder to vfat/fat32 formatted microSD card
+* Insert microSD card into camera and boot
+* Result should be no communication to cloud services, RTSP server on the IP address of the camera
+
 Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
 * Change root password to enable telnet login
@@ -24,6 +31,7 @@ ToDo
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Add an SSH server (dropbear)
+* Add method to use WiFi without first setting up camera via App (possibly by just copying wpa_supplicant file)
 
 2017-10-22 - Update 7 - (DJWillis)
 
