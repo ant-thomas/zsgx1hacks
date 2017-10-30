@@ -11,6 +11,13 @@ https://www.unifore.net/company-highlights/goke-hd-ip-camera-solution-gk7101-gk7
 Sensor - SC2135 - supposedly capable of 1080p 30fps
 https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensors.html
 
+Instructions
+* WiFi - setup camera via app
+* Ethernet - plug in to network
+* Download contents of ```sdcard``` folder to vfat/fat32 formatted microSD card
+* Insert microSD card into camera and boot
+* Result should be no communication to cloud services, RTSP server on the IP address of the camera
+
 Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
 * Change root password to enable telnet login
@@ -24,6 +31,26 @@ ToDo
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Add an SSH server (dropbear)
+* Add method to use WiFi without first setting up camera via App (possibly by just copying wpa_supplicant file)
+
+2017-10-22 - Update 7 - (DJWillis)
+
+* I am not saying the closed source p2pcam blob looks dodgy or anything but this did make me smile (from ```/home/factory_tool.sh```)
+
+``` 
+   #avoid p2pcam auto format tf card!!!
+   rm -f /bin/mkdosfs
+   rm -f /sbin/mkdosfs
+```
+That feels like the right way to work around some awesome design considerations :).
+
+2017-10-22 - Update 6 - (DJWillis) 
+
+* Firmware can be updated from a ```firmware.bin``` file on the root of the SD card (formatted vfat). 
+   This is a JFFS2 image structured much like other generic cameras based on the GOKE SoC's and a good few better know brands.
+  * Suspect this will be distrbuted as one section per partition. With the kernel and uboot not normally being flashed.
+  * The tool used to flash the images is ```sdc_tool```.
+  * https://github.com/zzerrg/gmfwtools should be usable with the right key and board ident (1003) to unpack and repack the userspace firmware into something we can flash. It may also make cross flashing userspaces possible. Right now however you may well end up with a bricked camera or at least needing serial so try at your own risk.
 
 2017-10-22 - Update 5
 * IR Cut and IR LED GPIOs found and controllable
@@ -47,7 +74,8 @@ ToDo
 
 2017-10-21 - Update 1
 * Photos of box and dismantled camera in the photo folder
-* Initial process was to download the app via the QR code in the instructions, this gave it WIFI details to logon to, possibly this could be prevented using ethernet.
+* Initial process was to download the app via the QR code in the instructions, this gave it WIFI details to logon to, possibly this could be prevented using ethernet. 
+  * Update: The need for the app can be bypassed completely by plugging directly into an ethernet connection and not setting up wifi initially as the camera will bring up eth0 via DHCP - Ignore the spoken messages about WiFi.
 * Camera dismantled and serial pins found
 * Boot output from serial dumped (uploaded)
 * The serial interface auto-logs in as root - very useful, but I've been unable to find the root password
