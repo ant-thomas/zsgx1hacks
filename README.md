@@ -33,6 +33,13 @@ ToDo
 * Add an SSH server (dropbear)
 * Add method to use WiFi without first setting up camera via App (possibly by just copying wpa_supplicant file)
 
+2017-11-04 - Update 8
+
+* Observations compared to the Xiaofang camera
+  * Image quality is generally better than the Xiaofang camera, much sharper at distance
+  * FOV is not as wide as the Xiaofang camera
+  * An increase in bitrate would produce a decent quality stream
+
 2017-10-22 - Update 7 - (DJWillis)
 
 * I am not saying the closed source p2pcam blob looks dodgy or anything but this did make me smile (from ```/home/factory_tool.sh```)
