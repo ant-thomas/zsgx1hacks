@@ -31,7 +31,15 @@ ToDo
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Add an SSH server (dropbear)
-* Add method to use WiFi without first setting up camera via App (possibly by just copying wpa_supplicant file)
+
+2017-11-17
+* Add method to use WiFi without first setting up camera via App using ```goke_p2pcam_param``` as follows (change accordingly):
+
+```
+./coke_p2pcam_param --wifissid=mywifiap --wifipass=8chrpass
+```
+
+* Also see the other options for ```goke_p2pcam_param``` by executing the following command: ```goke_p2pcam_param -h```
 
 2017-11-04 - Update 8
 
