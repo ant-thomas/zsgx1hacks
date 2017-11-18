@@ -18,10 +18,13 @@ cp /mnt/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
 cp /mnt/hosts.new /etc/hosts
 
 # wifi creds
-cp /mnt/wpa_supplicant.conf /home/wpa_supplicant.conf
+#cp /mnt/wpa_supplicant.conf /home/wpa_supplicant.conf
 
 # update root password to root
 (sleep 20 && echo "root:o.eyOMtPAPfbg:0:0:root:/root/:/bin/sh" > /etc/passwd && cat /etc/passwd ) &
+
+# update wifi creds
+(sleep 20 && /mnt/mmc01/0/goke_p2pcam_param --wifissid=SSID --wifipass=WIFIPASSKEY ) &
 
 # turn off high pitched noise
 (sleep 20 && /mnt/mmc01/0/goke_volume -s 0 ) &                 
