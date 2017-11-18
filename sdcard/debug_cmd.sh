@@ -1,15 +1,25 @@
-# Updates the busybox version - download to SD card from here
-# https://busybox.net/downloads/binaries/1.21.1/busybox-armv6l
+#!/bin/sh
+#
 
-# makes backup of original busybox
+cp /mnt/group /etc/group
+
 cp /bin/busybox /bin/busybox-orig
-# copies new busybox binary
 cp /mnt/busybox-armv6l /bin/busybox
+/bin/busybox --install -s
 
-# makes backup of original hosts file
-cp /etc/hosts /etc/hosts.orig
-# copies new hosts file blocking cloud services
+cp /mnt/dropbearmulti /bin/dropbearmulti
+mkdir /etc/dropbear
+cp /mnt/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
+/bin/dropbearmulti dropbear                                          
+
 cp /mnt/hosts.new /etc/hosts
 
-# update root password to root - login via telnet now possible
+cp /mnt/wpa_supplicant.conf /home/wpa_supplicant.conf
+
+/mnt/goke_volume -s 0
+
 (sleep 20 && echo "root:o.eyOMtPAPfbg:0:0:root:/root/:/bin/sh" > /etc/passwd && cat /etc/passwd ) &
+(sleep 20 && /mnt/mmc01/0/goke_volume -s 0 ) &                 
+(sleep 20 && cp /mnt/mmc01/0/shadow /etc/shadow ) &
+
+
