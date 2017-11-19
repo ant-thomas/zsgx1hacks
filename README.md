@@ -44,7 +44,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 #### 2017-11-17 - Update 10 (ant-thomas)
 * Pan/Tilt works via onvif - tested on TinyCam Free on Android. Hopefully this can be exploited otherwise using a webUI or other means if it sticks to the onvif api.
 
-2017-11-17 - Update 9
+#### 2017-11-17 - Update 9
 * ~~~Add method to use WiFi without first setting up camera via App using ```goke_p2pcam_param``` as follows (change accordingly):~~~ This currently only updates a camera already setup via the app.
 
 ```
@@ -57,14 +57,14 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 ./goke_volume -s 0
 ```
 
-2017-11-04 - Update 8
+#### 2017-11-04 - Update 8
 
 * Observations compared to the Xiaofang camera
   * Image quality is generally better than the Xiaofang camera, much sharper at distance
   * FOV is not as wide as the Xiaofang camera
   * An increase in bitrate would produce a decent quality stream
 
-2017-10-22 - Update 7 - (DJWillis)
+#### 2017-10-22 - Update 7 - (DJWillis)
 
 * I am not saying the closed source p2pcam blob looks dodgy or anything but this did make me smile (from ```/home/factory_tool.sh```)
 
@@ -75,7 +75,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 ```
 That feels like the right way to work around some awesome design considerations :).
 
-2017-10-22 - Update 6 - (DJWillis) 
+#### 2017-10-22 - Update 6 - (DJWillis) 
 
 * Firmware can be updated from a ```firmware.bin``` file on the root of the SD card (formatted vfat). 
    This is a JFFS2 image structured much like other generic cameras based on the GOKE SoC's and a good few better know brands.
@@ -83,27 +83,27 @@ That feels like the right way to work around some awesome design considerations 
   * The tool used to flash the images is ```sdc_tool```.
   * https://github.com/zzerrg/gmfwtools should be usable with the right key and board ident (1003) to unpack and repack the userspace firmware into something we can flash. It may also make cross flashing userspaces possible. Right now however you may well end up with a bricked camera or at least needing serial so try at your own risk.
 
-2017-10-22 - Update 5
+#### 2017-10-22 - Update 5
 * IR Cut and IR LED GPIOs found and controllable
   * ```gio -s 40 1``` IR Cut - night
   * ```gio -s 40 0``` IR Cut - day
   * ```gio -s 46 1``` IR LEDs - on
   * ```gio -s 46 0``` IR LEDs - off
 
-2017-10-22 - Update 4
+#### 2017-10-22 - Update 4
 * SD card contents moved to SD card folder
 * Updated hosts file included which looks like it prevents the camera from contacting the cloud services. The app shows the camera as disconnected and I'm seeing no activity on my router. RTSP server remains active.
 
-2017-10-22 - Update 3
+#### 2017-10-22 - Update 3
 * RTSP server user/pass - admin/admin - Presents a 1920x1080 12fps stream on rtsp://IPADDRESS/ (no audio)
 * Attempted to not run ```p2pcam``` by editing out specific parts of ```start.sh```, this resulting in the WiFi connection not being created. Maybe running ```wpa_supplicant``` via ```debug_cmd.sh``` may fix that.
 * As the RTSP server seems to be created by ```p2pcam``` it might be possible to prevent the cloud software communicating outwards by using various hosts file listings.
 
-2017-10-21 - Update 2
+#### 2017-10-21 - Update 2
 * home folder uploaded
 * p2pcam.tar.gz is the interesting file - this gets extracted on boot and p2pcam is the camera software.
 
-2017-10-21 - Update 1
+#### 2017-10-21 - Update 1
 * Photos of box and dismantled camera in the photo folder
 * Initial process was to download the app via the QR code in the instructions, this gave it WIFI details to logon to, possibly this could be prevented using ethernet. 
   * Update: The need for the app can be bypassed completely by plugging directly into an ethernet connection and not setting up wifi initially as the camera will bring up eth0 via DHCP - Ignore the spoken messages about WiFi.
