@@ -12,8 +12,9 @@ Sensor - SC2135 - supposedly capable of 1080p 30fps
 https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensors.html
 
 ### Instructions
-* WiFi - setup camera via app
-* Ethernet - plug in to network (doesn't need app setup)
+* Create network connection
+  * WiFi - setup camera via app
+  * Ethernet - plug in to network (doesn't need app setup)
 * Download contents of ```zsgx1hacks-v0.1.zip``` and extract the zip to vfat/fat32 formatted microSD card
 * Insert microSD card into camera and boot
 * Result should be
