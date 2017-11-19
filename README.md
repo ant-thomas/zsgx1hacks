@@ -22,7 +22,9 @@ Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
 * Change root password to enable telnet login
 * Upgrade busybox
+* Add dropbear SSH server
 * RTSP server accessible - rtsp://IPADDRESS/ user/pass admin/admin
+  * user/pass on a non-setup camera is sometimes admin with no password
 * Block cloud services via hosts file
 * Some GPIO functions found (IR LEDs and IR Cut)
 
