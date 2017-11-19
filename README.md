@@ -11,14 +11,20 @@ https://www.unifore.net/company-highlights/goke-hd-ip-camera-solution-gk7101-gk7
 Sensor - SC2135 - supposedly capable of 1080p 30fps
 https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensors.html
 
-Instructions
+### Instructions
 * WiFi - setup camera via app
-* Ethernet - plug in to network
-* Download contents of ```sdcard``` folder to vfat/fat32 formatted microSD card
+* Ethernet - plug in to network (doesn't need app setup)
+* Download contents of ```zsgx1hacks-v0.1.zip``` and extract the zip to vfat/fat32 formatted microSD card
 * Insert microSD card into camera and boot
-* Result should be no communication to cloud services, RTSP server on the IP address of the camera
+* Result should be
+  * No communication to cloud services
+  * RTSP/onvif server on the IP address of the camera
+  * SSH server - user/pass root/root
+  * Telnet server - user/pass root/root
+  * Updated busybox
+  * Annoying whining noise reduced
 
-Achieved so far
+### Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
 * Change root password to enable telnet login
 * Upgrade busybox
@@ -29,14 +35,13 @@ Achieved so far
 * Block cloud services via hosts file
 * Some GPIO functions found (IR LEDs and IR Cut)
 
-ToDo
+### ToDo
 * Figure out GPIO control for PTZ, IR and IR Cut, Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
-* Add an SSH server (dropbear)
 * Find method to enable WiFi connection without using the app
 
-2017-11-17 - Update 10 (ant-thomas)
+#### 2017-11-17 - Update 10 (ant-thomas)
 * Pan/Tilt works via onvif - tested on TinyCam Free on Android. Hopefully this can be exploited otherwise using a webUI or other means if it sticks to the onvif api.
 
 2017-11-17 - Update 9
