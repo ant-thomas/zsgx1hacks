@@ -15,7 +15,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Create network connection
   * WiFi - setup camera via app
   * Ethernet - plug in to network (doesn't need app setup)
-* Download ```zsgx1hacks-v0.1.zip``` and extract the contents of the zip file to a vfat/fat32 formatted microSD card
+* Download [zsgx1hacks-v0.1.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.1.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
 * Insert microSD card into camera and boot
 * Result should be
   * No communication to cloud services
