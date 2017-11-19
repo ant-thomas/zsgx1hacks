@@ -31,12 +31,13 @@ ToDo
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Add an SSH server (dropbear)
+* Find method to enable WiFi connection without using the app
 
 2017-11-17 - Update 10 (ant-thomas)
 * Pan/Tilt works via onvif - tested on TinyCam Free on Android. Hopefully this can be exploited otherwise using a webUI or other means if it sticks to the onvif api.
 
 2017-11-17 - Update 9
-* Add method to use WiFi without first setting up camera via App using ```goke_p2pcam_param``` as follows (change accordingly):
+* ~~~Add method to use WiFi without first setting up camera via App using ```goke_p2pcam_param``` as follows (change accordingly):~~~ This currently only updates a camera already setup via the app.
 
 ```
 ./goke_p2pcam_param --wifissid=mywifiap --wifipass=8chrpass
