@@ -28,6 +28,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 ### Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
 * Change root password to enable telnet login
+* Telnet/root password found ```cxlinux``` (thanks 1sttommy2guns)
 * Upgrade busybox
 * Add dropbear SSH server
 * RTSP server accessible - rtsp://IPADDRESS/ 
@@ -41,6 +42,9 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Find method to enable WiFi connection without using the app
+
+#### 2017-11-26 - Update 11 (ant-thomas)
+* Telnet/root password found by 1sttommy2guns - ```cxlinux```
 
 #### 2017-11-17 - Update 10 (ant-thomas)
 * Pan/Tilt works via onvif - tested on TinyCam Free on Android. Hopefully this can be exploited otherwise using a webUI or other means if it sticks to the onvif api.
