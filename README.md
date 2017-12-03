@@ -21,13 +21,13 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Create network connection
   * WiFi - setup camera via app
   * Ethernet - plug in to network (doesn't need app setup)
-* Download [zsgx1hacks-v0.1.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.1.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
+* Download [zsgx1hacks-v0.2.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.2.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
 * Insert microSD card into camera and boot
 * Result should be
   * No communication to cloud services
   * RTSP/onvif server on the IP address of the camera
-  * SSH server - user/pass root/root
-  * Telnet server - user/pass root/root
+  * SSH server - user/pass ```root/cxlinux```
+  * Telnet server - user/pass ```root/cxlinux```
   * Updated busybox
   * Annoying whining noise reduced
 
@@ -48,6 +48,10 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Find method to enable WiFi connection without using the app
+
+#### 2017-12-03 - Update 12 (ant-thomas)
+* Script updates time
+* Removed password update sections - use ```cxlinux``` as password
 
 #### 2017-11-26 - Update 11 (ant-thomas)
 * Telnet/root password found by 1sttommy2guns - ```cxlinux```
