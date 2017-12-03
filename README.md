@@ -52,6 +52,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 #### 2017-12-03 - Update 12 (ant-thomas)
 * Script updates time
 * Removed password update sections - use ```cxlinux``` as password
+* Updated hosts file with more addresses to block
 
 #### 2017-11-26 - Update 11 (ant-thomas)
 * Telnet/root password found by 1sttommy2guns - ```cxlinux```
