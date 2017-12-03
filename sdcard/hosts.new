@@ -1,29 +1,40 @@
-127.0.0.1       localhost
-127.0.1.1       goke
+127.0.0.1 localhost
+127.0.1.1 goke
 
-127.0.0.1 arcsoft.com
-127.0.0.1 xmpp.icloseli.cn
-127.0.0.1 relaycn.arcsoftcloud.com
-127.0.0.1 update.icloseli.cn
-
-127.0.0.1 esd.icloseli.cn
-127.0.0.1 upns.icloseli.cn
-
-
-127.0.0.1 argus.icloseli.cn
-127.0.0.1 relay.icloseli.cn
-127.0.0.1 stun.icloseli.cn
 127.0.0.1 api.icloseli.cn
-
-
-127.0.0.1 xmpp.icloseli.com
-127.0.0.1 relayus-w.arcsoftcloud.com
-127.0.0.1 update.icloseli.com
-127.0.0.1 esd.icloseli.com
-127.0.0.1 upns.icloseli.com
-
-127.0.0.1 xmpp.icloseli.com
-127.0.0.1 argus.icloseli.com
-
-127.0.0.1 relay.icloseli.com
 127.0.0.1 api.icloseli.com
+127.0.0.1 api.stg.closeli.com
+127.0.0.1 api.stg.icloseli.cn
+127.0.0.1 arcsoft.com
+127.0.0.1 argus.closeli.com
+127.0.0.1 argus.icloseli.cn
+127.0.0.1 argus.icloseli.com
+127.0.0.1 argus.stg.closeli.com
+127.0.0.1 argus.stg.icloseli.cn
+127.0.0.1 bell.closeli.cn
+127.0.0.1 bell.stg.closeli.cn
+127.0.0.1 esd.icloseli.cn
+127.0.0.1 esd.icloseli.com
+127.0.0.1 esd.stg.closeli.com
+127.0.0.1 esd.stg.icloseli.cn
+127.0.0.1 relay.icloseli.cn
+127.0.0.1 relay.icloseli.com
+127.0.0.1 relay.stg.closeli.com
+127.0.0.1 relay.stg.icloseli.cn
+127.0.0.1 relaycn.arcsoftcloud.com
+127.0.0.1 relayus-w.arcsoftcloud.com
+127.0.0.1 relayus-w.stg.arcsoftcloud.com
+127.0.0.1 stun.closeli.cn
+127.0.0.1 stun.icloseli.cn
+127.0.0.1 update.icloseli.cn
+127.0.0.1 update.icloseli.com
+127.0.0.1 update.stg.closeli.com
+127.0.0.1 update.stg.icloseli.cn
+127.0.0.1 upns.icloseli.cn
+127.0.0.1 upns.icloseli.com
+127.0.0.1 upns.stg.arcsoftcloud.com
+127.0.0.1 upns.stg.icloseli.cn
+127.0.0.1 xmpp.icloseli.cn
+127.0.0.1 xmpp.icloseli.com
+127.0.0.1 xmpp.stg.closeli.com
+127.0.0.1 xmpp.stg.icloseli.cn
