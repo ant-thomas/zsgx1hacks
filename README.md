@@ -5,6 +5,7 @@ The camera goes by various names
  * ZS-GX1
  * Snowman SRC-001
  * GUUDGO GD-SC03
+ * GUUDGO GD-SC11
 
 Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk, not that there's anything even vaguely risky!
 
