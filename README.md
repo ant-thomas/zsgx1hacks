@@ -44,7 +44,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Some GPIO functions found (IR LEDs and IR Cut)
 
 ### ToDo
-* Figure out GPIO control for PTZ, IR and IR Cut, Light sensor
+* Figure out GPIO control for PTZ and Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Find method to enable WiFi connection without using the app
