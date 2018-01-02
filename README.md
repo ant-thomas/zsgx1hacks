@@ -4,7 +4,7 @@ Record of attempted hacks on the ZS-GX1 IP Camera
 Confirmed working on the following camera models
  * ZS-GX1
  * Snowman SRC-001
- * GUUDGO GD-SC03
+ * GUUDGO GD-SC01
  * GUUDGO GD-SC03
  * GUUDGO GD-SC11
 
