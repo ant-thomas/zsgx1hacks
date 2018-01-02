@@ -1,9 +1,10 @@
 # ZS-GX1 Hacks
 Record of attempted hacks on the ZS-GX1 IP Camera
 
-The camera goes by various names
+Confirmed working on the following camera models
  * ZS-GX1
  * Snowman SRC-001
+ * GUUDGO GD-SC03
  * GUUDGO GD-SC03
  * GUUDGO GD-SC11
 
@@ -40,6 +41,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * RTSP server accessible - rtsp://IPADDRESS/ 
   * user/pass admin/admin
   * user/pass on a non-setup camera is sometimes admin with no password
+  * Different camera models may have different RTSP credentials eg ```dg20160404```
 * Block cloud services via hosts file
 * Some GPIO functions found (IR LEDs and IR Cut)
 
