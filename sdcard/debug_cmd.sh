@@ -43,7 +43,7 @@ else
 	cp "$DIR"/* /home/sdcard/
 
 	# Patch start.sh script to look in /home/sdcard/
-	sed '\;/mnt/debug_cmd\.sh$;a\
+	"$DIR"/busybox-armv6l sed '\;/mnt/debug_cmd\.sh$;a\
 elif [ -f "/home/sdcard/debug_cmd.sh" ]; then\
 	 /home/sdcard/debug_cmd.sh' \
 		/home/sdcard/start_orig.sh > /home/start.sh
