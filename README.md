@@ -51,6 +51,11 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Find method to enable WiFi connection without using the app
 
+#### 2018-02-13 - Update 13 (ant-thomas)
+* RTSP streams with sound ```rtsp://ipaddress/0/av0```
+* ```av0``` - high res stream with sound
+* ```av1``` - low res stream with sound
+
 #### 2017-12-03 - Update 12 (ant-thomas)
 * Script updates time
 * Removed password update sections - use ```cxlinux``` as password
