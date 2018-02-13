@@ -7,6 +7,7 @@ Confirmed working on the following camera models
  * GUUDGO GD-SC01
  * GUUDGO GD-SC03
  * GUUDGO GD-SC11
+ * Digoo DG-W01F
 
 Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk, not that there's anything even vaguely risky!
 
