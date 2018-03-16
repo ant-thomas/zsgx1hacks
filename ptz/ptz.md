@@ -37,7 +37,9 @@ two axes, two speed values are packed into the 32-bit argument.
 The "Get Position" request `0x82` will write the current PTZ position to the
 memory location specified in `arg0`. The following data was observed:
 
-{{{04 01 00 00 5a}}}
+```
+04 01 00 00 5a
+```
 
 The first two bytes may be interpreted as a 16-bit litte-endian integer and
 represent the pan-axis (left/right). Its current value (hex: 0x0104 ; dec: 260)
@@ -51,6 +53,6 @@ The fith byte describes the tilt-axis (up/down). Its current value (hex: 0x5a ;
 dec: 90) represents the "down" direction. Tilting upwards decreases the value
 till it reaches 0x00.
 
-*TODO:* Determine how many bytes are actually written to the buffer by "Get
+**TODO:** Determine how many bytes are actually written to the buffer by "Get
 Position".
 
