@@ -47,10 +47,15 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Some GPIO functions found (IR LEDs and IR Cut)
 
 ### ToDo
-* Figure out GPIO control for PTZ and Light sensor
+* Figure out GPIO control for Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Find method to enable WiFi connection without using the app
+
+#### 2018-03-16 - Update 14 (phaeilo)
+* Documented PTZ driver interface
+* Added additional pictures of hardware
+* Requesting excessively long URLs on port 80 will cause `p2pcam` to segfault...
 
 #### 2018-02-13 - Update 13 (ant-thomas)
 * RTSP streams with sound ```rtsp://ipaddress/0/av0```
