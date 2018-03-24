@@ -94,7 +94,7 @@ busybox httpd -p 8080 -h /home/hack/www
 cp /home/hack/dropbearmulti /bin/dropbearmulti
 mkdir /etc/dropbear
 cp /home/hack/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
-/bin/dropbearmulti dropbear                                          
+/bin/dropbearmulti dropbear
 
 # update hosts file to prevent communication
 cp /home/hack/hosts.new /etc/hosts
@@ -108,6 +108,9 @@ if [ ! -f /home/VOICE-orig.tgz ]; then
 fi
 
 cp /home/hack/VOICE-new.tgz /home/VOICE.tgz
+
+# turn off high pitched noise
+(sleep 20 && /home/hack/goke_volume -s 0 ) &
 
 
 #
