@@ -25,7 +25,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Create network connection
   * WiFi - setup camera via app
   * Ethernet - plug in to network (doesn't need app setup)
-* Download [zsgx1hacks-v0.2.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.2.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
+* Download [zsgx1hacks-v0.3.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.3.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
 * Insert microSD card into camera and boot
 * Result should be
   * No communication to cloud services
@@ -34,6 +34,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
   * Telnet server - user/pass ```root/cxlinux```
   * Updated busybox
   * Annoying whining noise reduced
+  * WebUI accessible - http://IPAddress:8080/cgi-bin/webui
 
 ### Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
@@ -47,12 +48,21 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
   * Different camera models may have different RTSP credentials eg ```dg20160404```
 * Block cloud services via hosts file
 * Some GPIO functions found (IR LEDs and IR Cut)
+* WebUI - http://IPAddress:8080/cgi-bin/webui
+* PTZ control via command line or WebUI
 
 ### ToDo
 * Figure out GPIO control for Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Find method to enable WiFi connection without using the app
+
+#### 2018-03-24 - Update 15 (ant-thomas)
+* Updated sdcard zip - [zsgx1hacks-v0.3.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.3.zip)
+* Hack no longer requires micro SD card to be present. Once installed the micro SD card can be removed.
+* Very simply WebUI created - to be improved - using busybox httpd
+* WebUI has PTZ controls - massive thanks to phaeilo
+* New VOICE.tgz file with empty audio files to silence the voices on boot.
 
 #### 2018-03-16 - Update 14 (phaeilo)
 * Documented PTZ driver interface
