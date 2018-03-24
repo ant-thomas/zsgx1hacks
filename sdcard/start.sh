@@ -90,6 +90,7 @@ cp /home/hack/busybox-armv6l /bin/busybox
 busybox httpd -p 8080 -h /home/hack/www
 
 
+
 # setup and install dropbear ssh server
 cp /home/hack/dropbearmulti /bin/dropbearmulti
 mkdir /etc/dropbear
@@ -98,6 +99,9 @@ cp /home/hack/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
 
 # update hosts file to prevent communication
 cp /home/hack/hosts.new /etc/hosts
+
+# start ftp server
+(tcpsvd -vE 0.0.0.0 21 ftpd / ) &
 
 # sync the time
 (sleep 20 && ntpd -q -p 0.uk.pool.ntp.org ) &
