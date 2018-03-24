@@ -62,7 +62,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 #### 2018-03-24 - Update 15 (ant-thomas)
 * Updated sdcard zip - [zsgx1hacks-v0.3.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.3.zip)
 * Hack no longer requires micro SD card to be present. Once installed the micro SD card can be removed.
- * If anyone wants a version that doesn't make any permanent changes to the camera let me know.
+  * If anyone wants a version that doesn't make any permanent changes to the camera let me know.
 * Very simple WebUI created - to be improved - using busybox httpd.
 * WebUI has PTZ controls - massive thanks to phaeilo.
 * New VOICE.tgz file with empty audio files to silence the voices on boot.
