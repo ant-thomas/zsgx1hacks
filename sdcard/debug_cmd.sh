@@ -1,30 +1,22 @@
 #!/bin/sh
 #
 
-cp /mnt/group /etc/group
+#Copy hack files
+mkdir /home/hack
+cp -R /mnt/hack/* /home/hack/
 
-# install updated version of busybox
-cp /bin/busybox /bin/busybox-orig
-cp /mnt/busybox-armv6l /bin/busybox
-/bin/busybox --install -s
+#Copy new hack start.sh
+if [ ! -f /home/start.sh.orig ]; then
+  cp /home/start.sh /home/start.sh.orig
+fi
 
-# setup and install dropbear ssh server
-cp /mnt/dropbearmulti /bin/dropbearmulti
-mkdir /etc/dropbear
-cp /mnt/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
-/bin/dropbearmulti dropbear
+cp /mnt/start.sh /home/start.sh 
 
-# update hosts file to prevent communication
-cp /mnt/hosts.new /etc/hosts
+#Rename debug_cmd.sh to prevent it running again
+mv /mnt/debug_cmd.sh /mnt/debug_cmd.sh.hack
 
-# update the time
-ntpd -q -p uk.pool.ntp.org
+#reboot to apply hacks
+reboot      
 
-# wifi creds - currently doesn't work
-#cp /mnt/wpa_supplicant.conf /home/wpa_supplicant.conf
 
-# update wifi creds - currently doesn't work
-#(sleep 20 && /mnt/mmc01/0/goke_p2pcam_param --wifissid=SSID --wifipass=WIFIPASSKEY ) &
 
-# turn off high pitched noise
-(sleep 20 && /mnt/mmc01/0/goke_volume -s 0 ) &

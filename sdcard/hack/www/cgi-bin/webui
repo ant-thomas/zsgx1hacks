@@ -1,0 +1,92 @@
+#!/bin/sh
+#
+echo "Content-type: text/html"
+echo ""
+command=`echo "$QUERY_STRING" | awk '{split($0,array,"&")} END{print array[1]}' | awk '{split($0,array,"=")} END{print array[2]}'`
+date=`date`
+ipadd=`ip route get 1 | awk '{print $NF;exit}'`
+uptime=`uptime`
+cat <<EOT
+<!DOCTYPE html>
+<html>
+<head>
+<title>zsgx1hacks UI</title>
+<style>
+body {
+    font-size: 100%;
+    font-family: Arial, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+<div>
+<button onclick="window.location.href='webui'" id="home">Home</button>
+<br />
+<br />
+<button onclick="window.location.href='webui?command=iron'" id="irledson">IR LEDs On</button>
+<br />
+<button onclick="window.location.href='webui?command=iroff'" id="irledsoff">IR LEDs Off</button>
+<br />
+<br />
+
+</div>
+<table>
+    <tr align="center">
+        <td><button onclick="window.location.href='webui?command=ptzlu'">&#11017;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzu'">&#11014;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzru'">&#11016;</button></td>
+    </tr>
+    <tr align="center">
+        <td><button onclick="window.location.href='webui?command=ptzl'">&#11013;</button></td>
+        <td>PTZ</td>
+        <td><button onclick="window.location.href='webui?command=ptzr'">&#10145;</button></td>
+    </tr>
+    <tr align="center">
+        <td><button onclick="window.location.href='webui?command=ptzld'">&#11019;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzd'">&#11015;</button></td>
+        <td><button onclick="window.location.href='webui?command=ptzrd'">&#11018;</button></td>
+    </tr>
+</table>
+<br />
+Date - $date
+<br />
+IP Address - $ipadd
+<br />
+Uptime - $uptime
+<br />
+<a href="https://github.com/ant-thomas/zsgx1hacks" target="_blank">ZS-GX1 Hacks - Github</a>
+
+</body></html>
+EOT
+
+ if [ "$command" = "iron" ]; then
+  gio -s 46 1 > /dev/null
+ fi
+ if [ "$command" = "iroff" ]; then
+  gio -s 46 0 > /dev/null
+ fi
+ if [ "$command" = "ptzu" ]; then
+  /home/hack/ptz-ctrl u > /dev/null
+ fi
+ if [ "$command" = "ptzd" ]; then
+  /home/hack/ptz-ctrl d > /dev/null
+ fi
+ if [ "$command" = "ptzl" ]; then
+  /home/hack/ptz-ctrl l > /dev/null
+ fi
+ if [ "$command" = "ptzr" ]; then
+  /home/hack/ptz-ctrl r > /dev/null
+ fi
+ if [ "$command" = "ptzlu" ]; then                                                           
+  /home/hack/ptz-ctrl lu > /dev/null                                                         
+ fi 
+ if [ "$command" = "ptzld" ]; then                                                           
+  /home/hack/ptz-ctrl ld > /dev/null                                                         
+ fi 
+ if [ "$command" = "ptzru" ]; then                                                           
+  /home/hack/ptz-ctrl ru > /dev/null                                                         
+ fi 
+ if [ "$command" = "ptzrd" ]; then                                                           
+  /home/hack/ptz-ctrl rd > /dev/null                                                         
+ fi 
+
