@@ -35,6 +35,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
   * Updated busybox
   * Annoying whining noise reduced
   * WebUI accessible - http://IPAddress:8080/cgi-bin/webui
+  * FTP Server pointing to the root file system - no username or password
 
 ### Achieved so far
 * ```debug_cmd.sh``` on an SD card enables commands to be run
@@ -50,6 +51,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Some GPIO functions found (IR LEDs and IR Cut)
 * WebUI - http://IPAddress:8080/cgi-bin/webui
 * PTZ control via command line or WebUI
+* FTP server - no username or password
 
 ### ToDo
 * Figure out GPIO control for Light sensor
@@ -64,6 +66,7 @@ https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensor
 * Very simple WebUI created - to be improved - using busybox httpd.
 * WebUI has PTZ controls - massive thanks to phaeilo.
 * New VOICE.tgz file with empty audio files to silence the voices on boot.
+* FTP Server added.
 
 #### 2018-03-16 - Update 14 (phaeilo)
 * Documented PTZ driver interface
