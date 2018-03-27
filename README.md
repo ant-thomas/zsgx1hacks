@@ -13,7 +13,7 @@ Confirmed working on the following camera models
 
 Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk, not that there's anything even vaguely risky!
 
-A few people have asked if they can donate something, you probably have much better things to spend your money on, but if you insist you can on [PayPal](http://paypal.me/antthomascouk) [![Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png)](http://paypal.me/antthomascouk)
+A few people have asked if they can donate something, you probably have much better things to spend your money on, but if you insist you can on [PayPal](http://paypal.me/antthomascouk) [![Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png)](http://paypal.me/antthomascouk) - I will look to put any donations towards getting some other cheap IP Cameras to hack and explore - suggestions welcome!
 
 This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was available on Gearbest for around £12. I bought 2 in an attempt to hack them as the reason they are so cheap is due to them being locked to paid cloud services.
 
