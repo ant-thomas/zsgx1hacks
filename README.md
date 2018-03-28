@@ -11,7 +11,7 @@ Confirmed working on the following camera models
  * YSA CIPC-GC13H
 
 
-Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk, not that there's anything even vaguely risky!
+Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk. If your camera isn't listed as supported you may break your camera.
 
 A few people have asked if they can donate something, you probably have much better things to spend your money on, but if you insist you can on [PayPal](http://paypal.me/antthomascouk) [![Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png)](http://paypal.me/antthomascouk)
 
