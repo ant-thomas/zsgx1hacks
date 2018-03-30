@@ -31,6 +31,7 @@ This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was availa
 * Change options in `config.txt`
   * Option for persistent hack without SD card
     * Default - run off SD Card
+    * If in doubt, run it off the SD Card
   * Option to restore original state of camera without hack
   * Option to silence the voices
     * This may be causing issues on some cameras so use at your own risk
@@ -66,6 +67,12 @@ This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was availa
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 * Find method to enable WiFi connection without using the app
+
+#### 2018-03-30 - Update 16 (ant-thomas)
+* Updated sdcard zip - [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip)
+* `config.txt` file to change some options
+* Option for persistent or SD card install - default is SD card
+* Option to remove hack and restore camera to before hack
 
 #### 2018-03-24 - Update 15 (ant-thomas)
 * Updated sdcard zip - [zsgx1hacks-v0.3.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.3.zip)
