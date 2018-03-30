@@ -6,6 +6,14 @@ command=`echo "$QUERY_STRING" | awk '{split($0,array,"&")} END{print array[1]}' 
 date=`date`
 ipadd=`ip route get 1 | awk '{print $NF;exit}'`
 uptime=`uptime`
+
+if [ -f /home/HACKP ]; then
+hacktype="PERSISTENT"
+elif [ -f /home/HACKSD ]; then
+hacktype="SD CARD"
+fi
+
+
 cat <<EOT
 <!DOCTYPE html>
 <html>
@@ -54,10 +62,19 @@ IP Address - $ipadd
 <br />
 Uptime - $uptime
 <br />
+Hack Type - $hacktype
+<br />
 <a href="https://github.com/ant-thomas/zsgx1hacks" target="_blank">ZS-GX1 Hacks - Github</a>
 
 </body></html>
 EOT
+
+if [ -f /home/HACKP ]; then
+ptzfolder="/home/hack"
+elif [ -f /home/HACKSD ]; then
+ptzfolder="/media/hack"
+fi
+
 
  if [ "$command" = "iron" ]; then
   gio -s 46 1 > /dev/null
@@ -66,27 +83,26 @@ EOT
   gio -s 46 0 > /dev/null
  fi
  if [ "$command" = "ptzu" ]; then
-  /home/hack/ptz-ctrl u > /dev/null
+  $ptzfolder/ptz-ctrl u > /dev/null
  fi
  if [ "$command" = "ptzd" ]; then
-  /home/hack/ptz-ctrl d > /dev/null
+  $ptzfolder/ptz-ctrl d > /dev/null
  fi
  if [ "$command" = "ptzl" ]; then
-  /home/hack/ptz-ctrl l > /dev/null
+  $ptzfolder/ptz-ctrl l > /dev/null
  fi
  if [ "$command" = "ptzr" ]; then
-  /home/hack/ptz-ctrl r > /dev/null
+  $ptzfolder/ptz-ctrl r > /dev/null
  fi
  if [ "$command" = "ptzlu" ]; then                                                           
-  /home/hack/ptz-ctrl lu > /dev/null                                                         
+  $ptzfolder/ptz-ctrl lu > /dev/null                                                         
  fi 
  if [ "$command" = "ptzld" ]; then                                                           
-  /home/hack/ptz-ctrl ld > /dev/null                                                         
+  $ptzfolder/ptz-ctrl ld > /dev/null                                                         
  fi 
  if [ "$command" = "ptzru" ]; then                                                           
-  /home/hack/ptz-ctrl ru > /dev/null                                                         
+  $ptzfolder/ptz-ctrl ru > /dev/null                                                         
  fi 
  if [ "$command" = "ptzrd" ]; then                                                           
-  /home/hack/ptz-ctrl rd > /dev/null                                                         
+  $ptzfolder/ptz-ctrl rd > /dev/null                                                         
  fi 
-

@@ -1,36 +1,42 @@
 #!/bin/sh
 #
 
+if [ -f /home/HACKP ]; then
+ptzfolder="/home/hack"
+elif [ -f /home/HACKSD ]; then
+ptzfolder="/media/hack"
+fi
+
 if [ $1 = "u" ];
 then
-/home/hack/ptz 0x65 0x14 && sleep 1 && /home/hack/ptz 0x64 0x14
+$ptzfolder/ptz 0x65 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "d" ];
 then
-/home/hack/ptz 0x66 0x14 && sleep 1 && /home/hack/ptz 0x64 0x14
+$ptzfolder/ptz 0x66 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "l" ];
 then
-/home/hack/ptz 0x67 0x14 && sleep 1 && /home/hack/ptz 0x64 0x14
+$ptzfolder/ptz 0x67 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "r" ];
 then
-/home/hack/ptz 0x68 0x14 && sleep 1 && /home/hack/ptz 0x64 0x14
+$ptzfolder/ptz 0x68 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "lu" ];                                                                                      
 then                                                                                                  
-/home/hack/ptz 0x69 0x200020 && sleep 1 && /home/hack/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x69 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 if [ $1 = "ld" ];                                                                                      
 then                                                                                                  
-/home/hack/ptz 0x6a 0x200020 && sleep 1 && /home/hack/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x6a 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 if [ $1 = "ru" ];                                                                                      
 then                                                                                                  
-/home/hack/ptz 0x6b 0x200020 && sleep 1 && /home/hack/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x6b 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 if [ $1 = "rd" ];                                                                                      
 then                                                                                                  
-/home/hack/ptz 0x6c 0x200020 && sleep 1 && /home/hack/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x6c 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 

@@ -27,7 +27,12 @@ This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was availa
 * Create network connection
   * WiFi - setup camera via app
   * Ethernet - plug in to network (doesn't need app setup)
-* Download [zsgx1hacks-v0.3.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.3.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
+* Download [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
+* Change options in `config.txt`
+  * Option for persistent hack without SD card
+  * Option to restore original state of camera without hack
+  * Option to silence the voices
+    * This may be causing issues on some cameras so use at your own risk
 * Insert microSD card into camera and boot
 * Result should be
   * No communication to cloud services
