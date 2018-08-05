@@ -30,6 +30,7 @@ There's a few different varieties of firmware across various brands of cameras w
 
 For example 
 Version 3.1.1.0908 is read-write and can use [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip)
+
 Version 3.2.8.0121 is read-only and can only use [readonlyhack-v0.1.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/readonlyhack-v0.1.zip)
 If in doubt use the read-only hack as that is more likely to work across more cameras.
 
