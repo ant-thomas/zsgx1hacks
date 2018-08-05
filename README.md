@@ -28,20 +28,16 @@ This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was availa
 ### Instructions
 There's a few different varieties of firmware across various brands of cameras which means it is impossible to know which version of the hack is the best for your camera. Older firmware are more hackable because the root filesystem is mounted read/write, new firmwares need the hack applying differently because the root filesystem is mounted read-only but the ```/home``` directory is writeable.
 
-For example
-
-Version 3.1.1.0908 is read-write and can use [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip)
-
-Version 3.2.8.0121 is read-only and can only use [readonlyhack-v0.1.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/readonlyhack-v0.1.zip)
-
+For example  
+Version 3.1.1.0908 is read-write and can use [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip)  
+Version 3.2.8.0121 is read-only and can only use [readonlyhack-v0.1.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/readonlyhack-v0.1.zip)  
 If in doubt use the read-only hack as that is more likely to work across more cameras.
 
 #### How to check version
-If you have already configured the camera with the cloud app there should be some info within the app showing firmware version.
-
-Using an onvif tool/app like Onvifer (Android) should give firmware version.
-
-You should also be able to find the firmware version by logging in via telnet and excuting the command ```ls /tmp | grep -F 3.``` or ```ls /tmp | head -1```
+If you have already configured the camera with the cloud app there should be some info within the app showing firmware version.  
+Using an onvif tool/app like Onvifer (Android) should give firmware version.  
+You should also be able to find the firmware version by logging in via telnet and excuting the command  
+```ls /tmp | grep -F 3.``` or ```ls /tmp | head -1```
 
 #### Steps
 * Create network connection
