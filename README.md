@@ -1,7 +1,8 @@
 # ZS-GX1 Hacks
 Record of attempted hacks on the ZS-GX1 IP Camera
 
-Confirmed working on the following camera models
+Confirmed working on the following camer
+a models
  * ZS-GX1
  * Snowman SRC-001
  * GUUDGO GD-SC01
@@ -10,6 +11,7 @@ Confirmed working on the following camera models
  * Digoo DG-W01F
  * YSA CIPC-GC13H
  * EYEPLUS CIPC-GC13H (read-only version)
+ * KERUI CIPC-GC15HE (read-only version)
 
 Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk. If your camera isn't listed as supported you may break your camera.
 
