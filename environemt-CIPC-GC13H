@@ -1,0 +1,58 @@
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-08-04 21:56 CEST
+Nmap scan report for 10.0.0.2
+Host is up (0.0067s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+23/tcp   open  telnet
+80/tcp   open  http
+554/tcp  open  rtsp
+7103/tcp open  unknown
+8001/tcp open  vcom-tunnel
+MAC Address: 00:0C:43:xx:xx:xx (Ralink Technology)
+
+# cat /proc/cpuinfo 
+Processor       : ARMv6-compatible processor rev 7 (v6l)
+BogoMIPS        : 597.40
+Features        : swp half fastmult vfp edsp java tls 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x0
+CPU part        : 0xb76
+CPU revision    : 7
+
+Hardware        : Goke IPC Board
+Revision        : 0000
+Serial          : 0000000000000000
+
+lsmod
+    Tainted: P  
+gkptz 16301 0 - Live 0x7f1bb000 (O)
+8188fu 932958 0 - Live 0x7f0a7000 (O)
+exfat 88974 0 - Live 0x7f08c000 (O)
+gio 1587 1 - Live 0x7f088000 (O)
+sensor 155912 0 - Live 0x7f05e000 (PO)
+audio 8700 4 - Live 0x7f058000 (PO)
+media 259569 7 sensor, Live 0x7f010000 (PO)
+hw_crypto 1948 1 media, Live 0x7f00c000 (PO)
+hal 31555 1 media, Live 0x7f000000 (PO)
+
+cat /etc/passwd
+root:yE7gW4O0CSXXg:0:0::/root:/bin/sh
+# root pwd cxlinux
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+bin:x:2:2:bin:/bin:/bin/sh
+sys:x:3:3:sys:/dev:/bin/sh
+sync:x:4:100:sync:/bin:/bin/sync
+mail:x:8:8:mail:/var/spool/mail:/bin/sh
+proxy:x:13:13:proxy:/bin:/bin/sh
+www-data:x:33:33:www-data:/var/www:/bin/sh
+backup:x:34:34:backup:/var/backups:/bin/sh
+operator:x:37:37:Operator:/var:/bin/sh
+haldaemon:x:68:68:hald:/:/bin/sh
+dbus:x:81:81:dbus:/var/run/dbus:/bin/sh
+ftp:x:83:83:ftp:/home/ftp:/bin/sh
+nobody:x:99:99:nobody:/home:/bin/sh
+sshd:x:103:99:Operator:/var:/bin/sh
+default:x:1000:1000:Default non-root user:/home/default:/bin/sh
+
+
