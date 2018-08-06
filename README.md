@@ -9,7 +9,7 @@ Confirmed working on the following camera models
  * GUUDGO GD-SC11
  * Digoo DG-W01F
  * YSA CIPC-GC13H
-
+ * EYEPLUS CIPC-GC13H (read-only version)
 
 Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk. If your camera isn't listed as supported you may break your camera.
 
