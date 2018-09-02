@@ -38,7 +38,7 @@ mount --bind /media/hack/hosts.new /etc/hosts
 /media/hack/dropbearmulti dropbear -r /media/hack/dropbear_ecdsa_host_key -B
 
 # start ftp server
-(/home/busybox/tcpsvd -E 0.0.0.0 21 ftpd -w / ) &
+(/home/busybox/tcpsvd -E 0.0.0.0 21 /home/busybox/ftpd -w / ) &
 
 # sync the time
 (sleep 20 && /home/busybox/ntpd -q -p 0.uk.pool.ntp.org ) &
