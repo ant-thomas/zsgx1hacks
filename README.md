@@ -98,6 +98,7 @@ You should also be able to find the firmware version by logging in via telnet an
 
 #### 2018-08-05 - Update 17 (ant-thomas)
 * Read-only hack created to enable cameras with a newer firmware to have extra features and turn off cloud connections.
+* SSH server has no password. It wasn't working with a password so I enabled no password logins. Hopefully be able to get that fixed.
 
 #### 2018-03-30 - Update 16 (ant-thomas)
 * Updated sdcard zip - [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip)
