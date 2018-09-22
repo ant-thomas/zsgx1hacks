@@ -10,6 +10,7 @@ Confirmed working on the following camera models
  * Digoo DG-W01F
  * YSA CIPC-GC13H
  * KERUI CIPC-GC15HE (read-only version)
+ * VESKYS CIPC-GC08HYL (read-write version)
 
 
 Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk. If your camera isn't listed as supported you may break your camera. You may even break your camera if it is listed due to a variety of firmware versions available.
