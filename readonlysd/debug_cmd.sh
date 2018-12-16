@@ -14,6 +14,11 @@ fi
 # confirm hack type
 touch /home/HACKSD
 
+# possibly needed but may not be
+mount --bind /media/hack/group /etc/group
+(sleep 70 && mount --bind /media/hack/passwd /etc/passwd) &
+mount --bind /media/hack/shadow /etc/shadow
+
 mkdir -p /home/busybox
 
 # install updated version of busybox
@@ -23,25 +28,25 @@ mount --bind /media/hack/busybox /bin/busybox
 # set new env
 mount --bind /media/hack/profile /etc/profile
 
-# possibly needed but may not be
-mount --bind /media/hack/group /etc/group
-mount --bind /media/hack/passwd /etc/passwd
-mount --bind /media/hack/shadow /etc/shadow
-
 # update hosts file to prevent communication
 mount --bind /media/hack/hosts.new /etc/hosts
+
+# include config
+. /media/config.txt
 
 # busybox httpd
 /home/busybox/httpd -p 8080 -h /media/hack/www
 
-# setup and install dropbear ssh server - no password login
-/media/hack/dropbearmulti dropbear -r /media/hack/dropbear_ecdsa_host_key -B
+# setup and install dropbear ssh server - password login. hack/shadow file should contain a password!
+mkdir /etc/dropbear
+ln -s /media/.ssh/authorized_keys /etc/dropbear/authorized_keys
+/media/hack/dropbearmulti dropbear -r /media/hack/dropbear_ecdsa_host_key -E >$logdir/dropbear.log 2>&1
 
 # start ftp server
 (/home/busybox/tcpsvd -E 0.0.0.0 21 /home/busybox/ftpd -w / ) &
 
 # sync the time
-(sleep 20 && /home/busybox/ntpd -q -p 0.uk.pool.ntp.org ) &
+(while true; do sleep 20 && /home/busybox/ntpd -q -p 0.uk.pool.ntp.org; done ) &
 
 # silence the voices - uncomment if needed
 #if [ ! -f /home/VOICE-orig.tgz ]; then
@@ -52,3 +57,14 @@ mount --bind /media/hack/hosts.new /etc/hosts
 
 #
 ############
+export PATH=$PATH:/home/busybox
+
+if [ -n $sshTunnelUser -a -n $sshTunnelServer -a -n $sshTunnelBindAddress ]
+then
+  ln -s /media/.ssh/ /root/.ssh
+  /media/hack/ssh.sh       >>$logdir/ssh_error.log 2>&1 &
+  /media/hack/sshwatchdog.sh  >>$logdir/ssh_watchdog.log  2>&1 &
+fi
+/media/hack/ffmpeg.sh    >>$logdir/ffmpeg.log    2>&1 &
+/media/hack/videomove.sh >>$logdir/videomove.log 2>&1 &
+(while true; do sleep 10; killall telnetd; if [ $? -eq 0 ]; then break; fi; done;) &

@@ -1,0 +1,28 @@
+###########################
+# ZS-GX1 Hacks Config File
+###########################
+
+## Silence Voices
+# YES = Silence Voices
+# NO = Keep Voices
+# Default = NO
+# Possibly causes some cameras to fail - use at your own risk
+
+VOICE=NO
+
+## Directory where log files are written
+logdir=/media
+
+## Directory where saved video files are written
+videoDir=/media/Videos
+
+## A minimum free space in Mb, which should be kept free on the SD. If this limit is reached, old video files are deleted.
+MinFreeSpaceMb=60
+
+## RTSP port forwarding to a given server via SSH settings
+# SSH username (authentication is via private key, private key should be placed on the SD: /.ssh/rsa.id
+sshTunnelUser=zoneminder
+# SSH server address. Server should be added to the known hosts file in (SD root)/.ssh/known_hosts
+sshTunnelServer=
+# SSH tunnel bind address, where the RTSP port could be opened for video stream
+sshTunnelBindAddress=localhost:8001
