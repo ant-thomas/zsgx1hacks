@@ -15,6 +15,8 @@ logdir=/media
 
 ## Directory where saved video files are written
 videoDir=/media/Videos
+## RTSP stream password
+rtspPasswd=
 
 ## A minimum free space in Mb, which should be kept free on the SD. If this limit is reached, old video files are deleted.
 MinFreeSpaceMb=60
