@@ -35,7 +35,7 @@ mount --bind /media/hack/hosts.new /etc/hosts
 . /media/config.txt
 
 # busybox httpd
-/home/busybox/httpd -p 8080 -h /media/hack/www
+/home/busybox/httpd -p 8080 -h /media/hack/www -r "Identify yourself:" -c /media/hack/httpd.conf
 
 # setup and install dropbear ssh server - password login. hack/shadow file should contain a password!
 mkdir /etc/dropbear
