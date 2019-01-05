@@ -59,12 +59,14 @@ ln -s /media/.ssh/authorized_keys /etc/dropbear/authorized_keys
 ############
 export PATH=$PATH:/home/busybox
 
+syslogd -O /media/syslog -b 3 -s 1000
+
 if [ -n $sshTunnelUser -a -n $sshTunnelServer -a -n $sshTunnelBindAddress ]
 then
   ln -s /media/.ssh/ /root/.ssh
-  /media/hack/ssh.sh       >>$logdir/ssh_error.log 2>&1 &
-  /media/hack/sshwatchdog.sh  >>$logdir/ssh_watchdog.log  2>&1 &
+  /media/hack/ssh.sh         2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/ssh_error.log    &
+  /media/hack/sshwatchdog.sh 2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/ssh_watchdog.log &
 fi
-/media/hack/ffmpeg.sh    >>$logdir/ffmpeg.log    2>&1 &
-/media/hack/videomove.sh >>$logdir/videomove.log 2>&1 &
+/media/hack/ffmpeg.sh    2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/ffmpeg.log    &
+/media/hack/videomove.sh 2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/videomove.log &
 (while true; do sleep 10; killall telnetd; if [ $? -eq 0 ]; then break; fi; done;) &
