@@ -83,7 +83,7 @@ You should also be able to find the firmware version by logging in via telnet an
 * RTSP server accessible - rtsp://IPADDRESS/ 
   * user/pass admin/admin
   * user/pass on a non-setup camera is sometimes admin with no password
-  * Different camera models may have different RTSP credentials eg ```dg20160404```
+  * Different camera models may have different RTSP credentials eg ```dg20160404``` or ```12345```
 * Block cloud services via hosts file
 * Some GPIO functions found (IR LEDs and IR Cut)
 * WebUI - http://IPAddress:8080/cgi-bin/webui
