@@ -89,12 +89,16 @@ You should also be able to find the firmware version by logging in via telnet an
 * WebUI - http://IPAddress:8080/cgi-bin/webui
 * PTZ control via command line or WebUI
 * FTP server - no username or password
+* WiFi Connection without inital setup with app in cls.conf
+
 
 ### ToDo
 * Figure out GPIO control for Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
-* Find method to enable WiFi connection without using the app
+
+#### 2019-22-05 - Update 18 (susw12)
+* Adds the ability to have camera connect to WiFi without needing to setup the camera using the app/software.
 
 #### 2018-08-05 - Update 17 (ant-thomas)
 * Read-only hack created to enable cameras with a newer firmware to have extra features and turn off cloud connections.
