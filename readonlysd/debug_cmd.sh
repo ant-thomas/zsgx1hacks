@@ -59,7 +59,7 @@ ln -s /media/.ssh/authorized_keys /etc/dropbear/authorized_keys
 ############
 export PATH=$PATH:/home/busybox
 
-syslogd -O /media/syslog -b 3 -s 1000
+syslogd -O /media/syslog -b 4 -s 512
 
 if [ -n $sshTunnelUser -a -n $sshTunnelServer -a -n $sshTunnelBindAddress ]
 then
@@ -68,5 +68,6 @@ then
   /media/hack/sshwatchdog.sh 2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/ssh_watchdog.log &
 fi
 /media/hack/ffmpeg.sh    2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/ffmpeg.log    &
+/media/hack/loadcheck.sh 2>&1 | while IFS= read -r line; do exho "$(date) $line"; done >>$logdir/load.log      &
 /media/hack/videomove.sh 2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/videomove.log &
 (while true; do sleep 10; killall telnetd; if [ $? -eq 0 ]; then break; fi; done;) &
