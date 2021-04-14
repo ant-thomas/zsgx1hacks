@@ -1,0 +1,23 @@
+###########################
+# ZS-GX1 Hacks Config File
+###########################
+
+## Persistent hack
+# YES = SD Card NOT required after hack is installed
+# NO = SD Card always required 
+# Default = NO
+
+PERSISTENT=NO
+
+## Restore camera to original state
+# Default = NO
+
+RESTORE=NO
+
+## Silence Voices
+# YES = Silence Voices
+# NO = Keep Voices
+# Default = NO
+# Possibly causes some cameras to fail - use at your own risk
+
+VOICE=NO
