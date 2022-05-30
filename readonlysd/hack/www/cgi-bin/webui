@@ -29,6 +29,9 @@ body {
 </head>
 <body>
 <div>
+
+<img id="snapshot" src="snapshot" />
+<br />
 <button onclick="window.location.href='webui'" id="home">Home</button>
 <br />
 <br />
@@ -68,6 +71,8 @@ Hack Type - $hacktype
 <a href="https://github.com/ant-thomas/zsgx1hacks" target="_blank">ZS-GX1 Hacks - Github</a>
 
 <script>
+setInterval(function() { document.getElementById("snapshot").src = "snapshot?t=" + Math.random(); }, 1000);
+
 function cmd(arg) {
 var req = new XMLHttpRequest();
 req.open("GET", "webui?command=" + arg, false);
