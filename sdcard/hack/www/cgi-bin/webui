@@ -32,28 +32,28 @@ body {
 <button onclick="window.location.href='webui'" id="home">Home</button>
 <br />
 <br />
-<button onclick="window.location.href='webui?command=iron'" id="irledson">IR LEDs On</button>
+<button onclick="cmd('iron');" id="irledson">IR LEDs On</button>
 <br />
-<button onclick="window.location.href='webui?command=iroff'" id="irledsoff">IR LEDs Off</button>
+<button onclick="cmd('iroff');" id="irledsoff">IR LEDs Off</button>
 <br />
 <br />
 
 </div>
 <table>
     <tr align="center">
-        <td><button onclick="window.location.href='webui?command=ptzlu'">&#11017;</button></td>
-        <td><button onclick="window.location.href='webui?command=ptzu'">&#11014;</button></td>
-        <td><button onclick="window.location.href='webui?command=ptzru'">&#11016;</button></td>
+        <td><button onclick="cmd('ptzlu');">&#11017;</button></td>
+        <td><button onclick="cmd('ptzu');">&#11014;</button></td>
+        <td><button onclick="cmd('ptzru');">&#11016;</button></td>
     </tr>
     <tr align="center">
-        <td><button onclick="window.location.href='webui?command=ptzl'">&#11013;</button></td>
+        <td><button onclick="cmd('ptzl');">&#11013;</button></td>
         <td>PTZ</td>
-        <td><button onclick="window.location.href='webui?command=ptzr'">&#10145;</button></td>
+        <td><button onclick="cmd('ptzr');">&#10145;</button></td>
     </tr>
     <tr align="center">
-        <td><button onclick="window.location.href='webui?command=ptzld'">&#11019;</button></td>
-        <td><button onclick="window.location.href='webui?command=ptzd'">&#11015;</button></td>
-        <td><button onclick="window.location.href='webui?command=ptzrd'">&#11018;</button></td>
+        <td><button onclick="cmd('ptzld');">&#11019;</button></td>
+        <td><button onclick="cmd('ptzd');">&#11015;</button></td>
+        <td><button onclick="cmd('ptzrd');">&#11018;</button></td>
     </tr>
 </table>
 <br />
@@ -66,6 +66,14 @@ Uptime - $uptime
 Hack Type - $hacktype
 <br />
 <a href="https://github.com/ant-thomas/zsgx1hacks" target="_blank">ZS-GX1 Hacks - Github</a>
+
+<script>
+function cmd(arg) {
+var req = new XMLHttpRequest();
+req.open("GET", "webui?command=" + arg, false);
+req.send(null);
+}
+</script>
 
 </body></html>
 EOT
