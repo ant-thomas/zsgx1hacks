@@ -18,7 +18,8 @@ cat <<EOT
 <!DOCTYPE html>
 <html>
 <head>
-<title>zsgx1hacks UI</title>
+<title>Camera - WebUI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
     font-size: 100%;
