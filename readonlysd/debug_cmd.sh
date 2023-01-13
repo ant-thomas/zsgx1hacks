@@ -20,6 +20,10 @@ mkdir -p /home/busybox
 mount --bind /media/hack/busybox /bin/busybox
 /bin/busybox --install -s /home/busybox
 
+#symlink to dropbear's ssh client and the scp
+ln -s /media/hack/dropbearmulti /bin/ssh
+ln -s /media/hack/dropbearmulti /bin/scp
+
 # set new env
 mount --bind /media/hack/profile /etc/profile
 
