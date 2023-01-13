@@ -9,9 +9,10 @@ Confirmed working on the following camera models
  * GUUDGO GD-SC11
  * Digoo DG-W01F
  * YSA CIPC-GC13H
+ * KERUI CIPC-GC15HE (read-only version)
 
 
-Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk. If your camera isn't listed as supported you may break your camera.
+Disclaimer - I'm not a programmer, just a hobbyist that likes poking around with things like this. You use the software here at your own risk. If your camera isn't listed as supported you may break your camera. You may even break your camera if it is listed due to a variety of firmware versions available.
 
 A few people have asked if they can donate something, you probably have much better things to spend your money on, but if you insist you can on [PayPal](http://paypal.me/antthomascouk) [![Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/pp-acceptance-small.png)](http://paypal.me/antthomascouk)
 
@@ -23,19 +24,53 @@ This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was availa
 
 [Sensor - SC2135 - supposedly capable of 1080p 30fps](https://www.unifore.net/product-highlights/ip-camera-smartsens-cmos-image-sensors.html)
 
+
 ### Instructions
+There's a few different varieties of firmware across various brands of cameras which means it is impossible to know which version of the hack is the best for your camera. Older firmware are more hackable because the root filesystem is mounted read/write, new firmwares need the hack applying differently because the root filesystem is mounted read-only but the ```/home``` directory is writeable.
+
+For example  
+Version 3.1.1.0908 is read-write and can use [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip)  
+Version 3.2.8.0121 is read-only and can only use [readonlyhack-v0.1.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/readonlyhack-v0.1.zip)  
+If in doubt use the read-only hack as that is more likely to work across more cameras.
+
+#### How to check version
+If you have already configured the camera with the cloud app there should be some info within the app showing firmware version.  
+Using an onvif tool/app like Onvifer (Android) should give firmware version.  
+You should also be able to find the firmware version by logging in via telnet and excuting the command  
+```ls /tmp | grep -F 3.``` or ```ls /tmp | head -1```
+
+#### Steps
 * Create network connection
   * WiFi - setup camera via app
   * Ethernet - plug in to network (doesn't need app setup)
-* Download [zsgx1hacks-v0.3.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.3.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
+* Download hack for your camera
+
+#### Older firmware - read/write
+* Download zip file - [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip) 
+* Extract the contents of the zip file to a vfat/fat32 formatted microSD card
+* Change options in `config.txt`
+  * Option for persistent hack without SD card
+    * Default - run off SD Card
+    * If in doubt, run it off the SD Card
+  * Option to restore original state of camera without hack
+  * Option to silence the voices
+    * This may be causing issues on some cameras so use at your own risk
+
+#### Newer firmware - read-only
+* Download zip file - [readonlyhack-v0.1.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/readonlyhack-v0.1.zip)
+* Extract the contents of the zip file to a vfat/fat32 formatted microSD card
+
+#### All
 * Insert microSD card into camera and boot
 * Result should be
   * No communication to cloud services
   * RTSP/onvif server on the IP address of the camera
-  * SSH server - user/pass ```root/cxlinux```
+  * SSH server
+    * R/W version - user/pass ```root/cxlinux```
+    * R-O version - user ```root``` no password
   * Telnet server - user/pass ```root/cxlinux```
   * Updated busybox
-  * Annoying whining noise reduced
+  * Annoying whining noise reduced (RW version only currently)
   * WebUI accessible - http://IPAddress:8080/cgi-bin/webui
   * FTP Server pointing to the root file system - no username or password
 
@@ -48,18 +83,32 @@ This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was availa
 * RTSP server accessible - rtsp://IPADDRESS/ 
   * user/pass admin/admin
   * user/pass on a non-setup camera is sometimes admin with no password
-  * Different camera models may have different RTSP credentials eg ```dg20160404```
+  * Different camera models may have different RTSP credentials eg ```dg20160404``` or ```12345```
 * Block cloud services via hosts file
 * Some GPIO functions found (IR LEDs and IR Cut)
 * WebUI - http://IPAddress:8080/cgi-bin/webui
 * PTZ control via command line or WebUI
 * FTP server - no username or password
+* WiFi Connection without inital setup with app in cls.conf
+
 
 ### ToDo
 * Figure out GPIO control for Light sensor
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
-* Find method to enable WiFi connection without using the app
+
+#### 2019-22-05 - Update 18 (susw12)
+* Adds the ability to have camera connect to WiFi without needing to setup the camera using the app/software.
+
+#### 2018-08-05 - Update 17 (ant-thomas)
+* Read-only hack created to enable cameras with a newer firmware to have extra features and turn off cloud connections.
+* SSH server has no password. It wasn't working with a password so I enabled no password logins. Hopefully be able to get that fixed.
+
+#### 2018-03-30 - Update 16 (ant-thomas)
+* Updated sdcard zip - [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip)
+* `config.txt` file to change some options
+* Option for persistent or SD card install - default is SD card
+* Option to remove hack and restore camera to before hack
 
 #### 2018-03-24 - Update 15 (ant-thomas)
 * Updated sdcard zip - [zsgx1hacks-v0.3.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.3.zip)

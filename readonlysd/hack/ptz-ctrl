@@ -9,34 +9,34 @@ fi
 
 if [ $1 = "u" ];
 then
-$ptzfolder/ptz 0x65 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
+$ptzfolder/ptz 0x65 0x14 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "d" ];
 then
-$ptzfolder/ptz 0x66 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
+$ptzfolder/ptz 0x66 0x14 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "l" ];
 then
-$ptzfolder/ptz 0x67 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
+$ptzfolder/ptz 0x67 0x14 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "r" ];
 then
-$ptzfolder/ptz 0x68 0x14 && sleep 1 && $ptzfolder/ptz 0x64 0x14
+$ptzfolder/ptz 0x68 0x14 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14
 fi
 if [ $1 = "lu" ];                                                                                      
 then                                                                                                  
-$ptzfolder/ptz 0x69 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x69 0x200020 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 if [ $1 = "ld" ];                                                                                      
 then                                                                                                  
-$ptzfolder/ptz 0x6a 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x6a 0x200020 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 if [ $1 = "ru" ];                                                                                      
 then                                                                                                  
-$ptzfolder/ptz 0x6b 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x6b 0x200020 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 if [ $1 = "rd" ];                                                                                      
 then                                                                                                  
-$ptzfolder/ptz 0x6c 0x200020 && sleep 1 && $ptzfolder/ptz 0x64 0x14                                       
+$ptzfolder/ptz 0x6c 0x200020 && sleep 0.5 && $ptzfolder/ptz 0x64 0x14                                       
 fi 
 

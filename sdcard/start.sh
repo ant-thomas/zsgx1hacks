@@ -99,26 +99,22 @@ cp /home/hack/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
 cp /home/hack/hosts.new /etc/hosts
 
 # start ftp server
-(tcpsvd -E 0.0.0.0 21 ftpd / ) &
+(tcpsvd -E 0.0.0.0 21 ftpd -w / ) & 
 
 # sync the time
-(sleep 20 && ntpd -q -p 0.uk.pool.ntp.org ) &
+(sleep 20 && ntpd -q -p 0.uk.pool.ntp.org ) & 
 
 # silence the voices
 if [ ! -f /home/VOICE-orig.tgz ]; then
     cp /home/VOICE.tgz /home/VOICE-orig.tgz
 fi
 
+if [ -f /home/VOICEOFF ]; then
 cp /home/hack/VOICE-new.tgz /home/VOICE.tgz
-
-# turn off high pitched noise
-(sleep 20 && /home/hack/goke_volume -s 0 ) &
-
+fi
 
 #
 ############
-
-
 
 umount /mnt
 

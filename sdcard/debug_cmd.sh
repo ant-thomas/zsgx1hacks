@@ -1,22 +1,36 @@
 #!/bin/sh
 #
 
-#Copy hack files
-mkdir /home/hack
-cp -R /mnt/hack/* /home/hack/
+# include config
+. /mnt/config.txt
 
-#Copy new hack start.sh
-if [ ! -f /home/start.sh.orig ]; then
-  cp /home/start.sh /home/start.sh.orig
+if [ "$VOICE" = "YES" ]; then
+rm /home/VOICEOFF
+rm /home/VOICEON
+touch /home/VOICEOFF
+else
+rm /home/VOICEOFF
+rm /home/VOICEON
+touch /home/VOICEON
 fi
 
-cp /mnt/start.sh /home/start.sh 
 
-#Rename debug_cmd.sh to prevent it running again
-mv /mnt/debug_cmd.sh /mnt/debug_cmd.sh.hack
+if [ "$RESTORE" = "YES" ]; then
+ /mnt/restore.sh
 
-#reboot to apply hacks
-reboot      
+elif [ "$PERSISTENT" = "YES" ];then
+rm /home/HACKP
+rm /home/HACKSD
+touch /home/HACKP
+ /mnt/persistenthack.sh
+
+elif [ ! "$PERSISTENT" = "YES" ];then
+rm /home/HACKP
+rm /home/HACKSD
+touch /home/HACKSD
+ /mnt/sdcardhack.sh
+fi 
+
 
 
 
