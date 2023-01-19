@@ -97,6 +97,11 @@ You should also be able to find the firmware version by logging in via telnet an
 * Change bitrate of RTSP stream
 * Get rid of ```p2pcam``` and use an alternative RTSP server
 
+#### 2022-06-10 - Update 19 (lkosson)
+* Added async (non-reloading) PTZ controls in Web UI
+* Added http://IPAddress:8080/cgi-bin/snapshot endpoint
+* Added http://IPAddress:8080/cgi-bin/stream endpoint for streaming MJPEG live feed
+
 #### 2019-22-05 - Update 18 (susw12)
 * Adds the ability to have camera connect to WiFi without needing to setup the camera using the app/software.
 
