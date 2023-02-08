@@ -67,6 +67,33 @@ void param_set_string(size_t offset, size_t size, char *data) {
 	free(buffer);
 }
 
+uint32_t checksum() {
+	uint32_t sum = 0;
+	uint16_t word;
+	FILE *file = fopen(filename, "r+b");
+	if(file == NULL) {
+		error(1, errno, "error: cannot open file: %s", filename);
+	}
+	fseek(file, 0xC, SEEK_SET);
+	while (!feof(file)) {
+		fread(&word, 2, 1, file);
+		sum+=word;
+	}
+	return sum;
+}
+
+void update_checksum() {
+	uint32_t sum;
+	FILE *file = fopen(filename, "r+b");
+	if(file == NULL) {
+		error(1, errno, "error: cannot open file: %s", filename);
+	}
+	fseek(file, 0x4, SEEK_SET);
+	sum = checksum();
+	fwrite(&sum, 4, 1, file);
+}
+
+
 int main(int argc, char *argv[]) {
 	int option = 0, option_index = 0, index = 0;
 
@@ -111,6 +138,7 @@ int main(int argc, char *argv[]) {
 			case 'n':
 			if(optarg) {
 				param_set_int(0xf6, 1, strtol(optarg, NULL, 0));
+				update_checksum();
 			} else {
 				param_get(0xf6, 1);
 			}
@@ -118,6 +146,7 @@ int main(int argc, char *argv[]) {
 			case 'o':
 			if(optarg) {
 				param_set_int(0xf8, 1, strtol(optarg, NULL, 0));
+				update_checksum();
 			} else {
 				param_get(0xf8, 1);
 			}
@@ -125,6 +154,7 @@ int main(int argc, char *argv[]) {
 			case 'q':
 			if(optarg) {
 				param_set_int(0xec, 1, strtol(optarg, NULL, 0));
+				update_checksum();
 			} else {
 				param_get(0xec, 1);
 			}
@@ -132,6 +162,7 @@ int main(int argc, char *argv[]) {
 			case 'w':
 			if(optarg) {
 				param_set_string(0x128, 32, optarg);
+				update_checksum();
 			} else {
 				param_get_string(0x128, 32);
 			}
@@ -139,6 +170,7 @@ int main(int argc, char *argv[]) {
 			case 'k':
 			if(optarg) {
 				param_set_string(0x154, 8, optarg);
+				update_checksum();
 			} else {
 				param_get_string(0x154, 8);
 			}
@@ -146,6 +178,7 @@ int main(int argc, char *argv[]) {
 			case 'u':
 			if(optarg) {
 				param_set_string(0x1fc, 16, optarg);
+				update_checksum();
 			} else {
 				param_get_string(0x1fc, 16);
 			}
@@ -153,6 +186,7 @@ int main(int argc, char *argv[]) {
 			case 'p':
 			if(optarg) {
 				param_set_string(0x20c, 16, optarg);
+				update_checksum();
 			} else {
 				param_get_string(0x20c, 16);
 			}
