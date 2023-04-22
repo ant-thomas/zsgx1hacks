@@ -71,3 +71,11 @@ fi
 /media/hack/loadcheck.sh 2>&1 | while IFS= read -r line; do exho "$(date) $line"; done >>$logdir/load.log      &
 /media/hack/videomove.sh 2>&1 | while IFS= read -r line; do echo "$(date) $line"; done >>$logdir/videomove.log &
 (while true; do sleep 10; killall telnetd; if [ $? -eq 0 ]; then break; fi; done;) &
+
+#(while true; do ifconfig >>$logdir/ifconf.log 2>&1; iwconfig >>$logdir/ifconf.log 2>&1; iwlist ra0 scanning >>$logdir/ifconf.log 2>&1; done;) &
+#cp -f $logdir/wpa_supplicant.conf /home/wpa_supplicant.conf
+#cp -f /home/wpa_supplicant.conf $logdir/backup/
+#cp -f /home/config.cfg $logdir/backup/
+#cp -f /home/config.xml $logdir/backup/
+#cp -f /home/devParam.dat $logdir/backup/
+#cp -f $logdir/config/* /home/
